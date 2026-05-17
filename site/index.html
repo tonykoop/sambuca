@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sambuca — a modern boat-shaped arched harp inspired by the Royal Cemetery of Ur</title>
+  <meta name="description" content="Build log for Tony Koop's sambuca — a modern arched harp inspired by BM 121198, c. 2600 BC. Parametric, family-scalable, CNC-buildable.">
+  <style>
+    :root {
+      --lapis: #1E3A8A;
+      --gold: #D4A017;
+      --walnut: #3D2817;
+      --cedar: #B98B47;
+      --cream: #F8F4E9;
+      --ink: #1F1A14;
+      --muted: #6B5E4D;
+      --paper: #FFFFFF;
+      --rule: #E0D6C5;
+    }
+    * { box-sizing: border-box; }
+    html { font-family: "Source Serif Pro", "Iowan Old Style", Georgia, serif;
+           font-size: 17px; color: var(--ink); background: var(--cream); }
+    body { margin: 0; line-height: 1.55; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+    header.banner {
+      background: var(--walnut); color: var(--cream);
+      padding: 14px 0; border-top: 4px solid var(--gold);
+      font-family: "Source Sans Pro", system-ui, sans-serif;
+      font-size: 13px; letter-spacing: 0.04em;
+    }
+    .banner-inner { max-width: 760px; margin: 0 auto; padding: 0 24px;
+                    display: flex; align-items: center; gap: 12px; }
+    .banner-dot { width: 10px; height: 10px; border-radius: 50%;
+                  background: var(--gold); flex-shrink: 0; }
+    .banner b { color: var(--gold); }
+
+    h1 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+         font-size: 38px; line-height: 1.1; color: var(--walnut);
+         margin: 40px 0 8px; }
+    h1 small { display: block; font-size: 17px; color: var(--muted);
+               font-weight: 400; font-style: italic; margin-top: 8px; }
+    h2 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+         font-size: 22px; color: var(--walnut);
+         margin: 40px 0 8px; padding-left: 12px;
+         border-left: 4px solid var(--lapis); }
+    h3 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+         font-size: 15px; color: var(--lapis); margin: 24px 0 4px;
+         text-transform: uppercase; letter-spacing: 0.06em; }
+    p { margin: 0.6em 0; }
+    strong { color: var(--lapis); }
+    a { color: var(--lapis); text-decoration: none;
+        border-bottom: 1px solid var(--cedar); }
+    a:hover { border-bottom-color: var(--lapis); }
+    code { font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+           background: var(--paper); padding: 1px 5px; border-radius: 3px;
+           font-size: 0.92em; border: 1px solid var(--rule); }
+    blockquote { border-left: 3px solid var(--cedar); padding-left: 16px;
+                 color: var(--muted); font-style: italic; margin: 16px 0; }
+    ul, ol { padding-left: 22px; }
+    li { margin: 4px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 0.92em; }
+    th, td { border: 1px solid var(--rule); padding: 6px 10px; text-align: left;
+             vertical-align: top; }
+    th { background: var(--walnut); color: var(--cream); font-family: "Source Sans Pro", sans-serif;
+         font-weight: 600; }
+    tr:nth-child(even) td { background: var(--paper); }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 11px;
+            font-size: 11px; font-family: "Source Sans Pro", sans-serif;
+            letter-spacing: 0.04em; }
+    .pill-private { background: var(--gold); color: var(--walnut); }
+    .pill-gate { background: var(--lapis); color: var(--cream); }
+
+    .stage-grid { display: grid; grid-template-columns: 80px 1fr; gap: 12px 16px;
+                  margin: 12px 0; }
+    .stage-grid .stage-num { font-family: "Source Sans Pro", sans-serif;
+                              font-weight: 600; color: var(--lapis);
+                              font-size: 14px; padding-top: 2px; }
+    .stage-grid .stage-text small { color: var(--muted); }
+
+    .hero {
+      margin: 24px 0 32px;
+      border: 1px dashed var(--cedar); background: var(--paper);
+      padding: 96px 24px; text-align: center;
+      color: var(--muted); font-style: italic; font-size: 14px;
+    }
+
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule);
+             color: var(--muted); font-size: 13px;
+             font-family: "Source Sans Pro", sans-serif; }
+    footer p { margin: 6px 0; }
+    .license-row { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 10px; }
+    .license-row span { background: var(--paper); padding: 4px 10px;
+                        border: 1px solid var(--rule); border-radius: 4px;
+                        font-size: 12px; }
+
+    @media (max-width: 540px) {
+      h1 { font-size: 30px; }
+      .hero { padding: 56px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="banner">
+    <div class="banner-inner">
+      <span class="banner-dot"></span>
+      <div>
+        <b>PRIVATE REVIEW</b> · pending three release gates ·
+        cultural advisor sign-off ·
+        SAM-13-MULE tension validation ·
+        Heifer Zephyr brand integration locked
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <h1>
+      Sambuca
+      <small>A modern boat-shaped arched harp inspired by the Royal Cemetery of Ur, c. 2600 BC. SAM-13-ROOT prototype + parametric family of five variants.</small>
+    </h1>
+
+    <p style="font-size: 14px; color: var(--muted); font-family: 'Source Sans Pro', sans-serif;">
+      Tony Koop · Heifer Zephyr · Fall 2026 capstone target
+    </p>
+
+    <div class="hero">
+      [HERO-01 — SAM-13-ROOT three-quarter on stand, soft directional light]<br>
+      <span style="font-size: 11px;">photo to be captured per <code>photo-shotlist.md</code></span>
+    </div>
+
+    <h2>What this is</h2>
+    <p>
+      The sambuca is a modern reinterpretation of the Sumerian boat-shaped arched
+      harp recovered from the Royal Tombs at Ur. The original artifact — British
+      Museum object 121198 — survives only as gold tuning pegs, lapis lazuli
+      decorative fragments, and Woolley's field sketches; the wood is a 1971–72
+      reconstruction from contemporary cylinder-seal depictions. That gives the
+      modern build a 4500-year-old visual fingerprint — boat hull, curved
+      cantilever neck, gold-flared cap, multi-strip lapis seam band, row of bulb
+      tuning pegs with cord wraps — and full design freedom on every dimension
+      underneath.
+    </p>
+    <p>
+      Inspired by the pattern. Not a reproduction. Not a claim of cultural
+      authority over any modern living tradition.
+    </p>
+
+    <h2>Family spec</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th><th>Body</th><th>Strings</th><th>Tuning</th><th>Harness</th><th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>SAM-13-ROOT</b></td><td>650 mm</td><td>13</td><td>G3 → E5</td><td>none</td><td>build target</td></tr>
+        <tr><td>SAM-19-MID</td><td>850 mm</td><td>19</td><td>D3 → G5</td><td>low-back belt</td><td>mid concert</td></tr>
+        <tr><td>SAM-25-CONCERT</td><td>1050 mm</td><td>25</td><td>A2 → A5</td><td>sax harness</td><td>concert</td></tr>
+        <tr><td>SAM-13-AE</td><td>650 mm</td><td>13</td><td>G3 → E5</td><td>none + piezo</td><td>acoustic-electric</td></tr>
+        <tr><td>SAM-13-MULE</td><td>650 mm</td><td>13</td><td>G3 → E5 (reduced T)</td><td>none</td><td>tension test mule</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 13px; color: var(--muted); font-style: italic;">
+      All five share one parametric MasterLayout part. <code>body_length_mm</code>
+      and <code>string_count</code> drive the configurations.
+    </p>
+
+    <h2>Design fingerprint</h2>
+    <p>Eight visual elements that read as Sumerian sambuca:</p>
+    <ol>
+      <li>Gold-flared cap at the neck top.</li>
+      <li>Row of 13 bulb-headed tuning pegs with visible cord wraps.</li>
+      <li>Strong J-curve neck meeting the body at the stern.</li>
+      <li>Multi-strip lapis band (5 parallel strips) along the soundboard-hull seam.</li>
+      <li>Brass collar at the neck-body joint.</li>
+      <li>Slim boat hull with pronounced bow lift.</li>
+      <li>Rectangular pale inlay panel at the bow end of the soundboard.</li>
+      <li>Two integral stub blocks at the stern keel.</li>
+    </ol>
+
+    <h2>What's modern</h2>
+    <ul>
+      <li><b>Soundhole at the keel</b>, not the soundboard — projects sound forward toward the listener.</li>
+      <li><b>Geared guitar tuners</b> hidden inside the neck, behind PVD-gold-tone bulb caps and decorative cord wraps.</li>
+      <li><b>Modern strings</b> — fluorocarbon trebles + wound nylon basses, 65–80 kgf calibrated total.</li>
+      <li><b>CNC fabrication</b> for the hull, neck, inlay program, and stand.</li>
+      <li><b>Japanese kanawa-tsugi joinery</b> on the stand — a stylistic choice, not Sumerian.</li>
+    </ul>
+
+    <h2>Build timeline</h2>
+    <p>Active build: 60–90 hours over 6–10 weeks, plus a 30-day MULE tension hold before SAM-13-ROOT is brought to full tension.</p>
+
+    <div class="stage-grid">
+      <div class="stage-num">Stage 1</div>
+      <div class="stage-text">Hull (walnut, CNC-from-block or stave-laminated). <small>Wall thickness verified to 6 ± 0.5 mm at midship, bow, stern.</small></div>
+
+      <div class="stage-num">Stage 2</div>
+      <div class="stage-text">Neck (sapele 3-laminate, CNC sweep). <small>Highest-risk structural member.</small></div>
+
+      <div class="stage-num">Stage 3</div>
+      <div class="stage-text">Soundboard (3 mm Western red cedar, fan-braced, inlay pockets cut).</div>
+
+      <div class="stage-num">Stage 4</div>
+      <div class="stage-text">Scarf joint + brass collar. <small>The single most critical joint.</small></div>
+
+      <div class="stage-num">Stage 5</div>
+      <div class="stage-text">Soundboard installation. Multi-strip lapis inlay + bow-end inlay panel filled.</div>
+
+      <div class="stage-num">Stage 6</div>
+      <div class="stage-text">Keel port cut (80 × 50 mm oval, 15° forward tilt).</div>
+
+      <div class="stage-num">Stage 7</div>
+      <div class="stage-text">Stand (CNC-curve-profiled walnut cradle with kanawa-tsugi joinery).</div>
+
+      <div class="stage-num">Stage 8</div>
+      <div class="stage-text">Tuners + decorative cord wraps + PVD-gold bulb caps. Fingerprint complete.</div>
+
+      <div class="stage-num">Stage 9</div>
+      <div class="stage-text">String-holder strip + prototype voicing on SAM-13-MULE. <span class="pill pill-gate">voicing gate</span></div>
+
+      <div class="stage-num">Stage 10</div>
+      <div class="stage-text">SAM-13-MULE 30-day tension hold, then SAM-13-ROOT gradual stringing to 65–80 kgf. <span class="pill pill-gate">release gate</span></div>
+
+      <div class="stage-num">Stage 11</div>
+      <div class="stage-text">Final voicing + acoustic measurement (SPL, frequency response, Helmholtz check).</div>
+
+      <div class="stage-num">Stage 12</div>
+      <div class="stage-text">Documentation + brand integration + cultural-advisor review. <span class="pill pill-gate">release gate</span></div>
+    </div>
+
+    <h2>Acoustic study</h2>
+    <p>
+      Hull volume on the SAM-13-ROOT is ~3.8 L — small for a 13-string instrument.
+      The Wolfram notebook (<code>wolfram/sambuca-acoustics-starter.wl</code>) predicts:
+    </p>
+    <ul>
+      <li>Cavity Helmholtz with the 80 × 50 mm keel port: ~143 Hz.</li>
+      <li>First soundboard plate mode (cedar @ 3 mm): ~160 Hz.</li>
+      <li>Coupled cavity-plate pair: ~125 Hz / ~185 Hz.</li>
+      <li>Bass strings (G3 → C4) sit just above the lower coupled mode — the voicing sweet spot for arched harps with small cavities.</li>
+    </ul>
+
+    <h2>Provenance &amp; cultural language</h2>
+    <p>
+      The sambuca pattern is rooted in early Mesopotamian musical instruments from the
+      Royal Cemetery at Ur (~4500 years old, unambiguously public domain). The Greek term
+      <em>sambykē</em> (σαμβύκη) is a later (Hellenistic) word, historically debated as a
+      possible descendant of the Sumerian form; the build adopts the modern term while
+      acknowledging the etymological uncertainty.
+    </p>
+    <blockquote>
+      Inspired by the Sumerian pattern. Not a reproduction of any specific surviving artifact.
+      Not a recreation of any reconstructed instrument such as BM 121198. Not a claim of
+      cultural authority over any modern living tradition.
+    </blockquote>
+
+    <h2>Release gates</h2>
+    <p>This repo stays in <span class="pill pill-private">PRIVATE REVIEW</span> until:</p>
+    <ol>
+      <li><b>Cultural / musicology advisor review</b> — sign-off on the provenance language above and on imagery attribution across the deck and site.</li>
+      <li><b>SAM-13-MULE tension and joint validation</b> — successful 30-day neck-deflection hold at MULE tension with ≤ 2 mm deflection.</li>
+      <li><b>Heifer Zephyr brand integration</b> — placement option A (soundboard inlay) or B (stand-only) locked.</li>
+    </ol>
+
+    <h2>Repo map</h2>
+    <ul>
+      <li><code>README.md</code> — entry point.</li>
+      <li><code>reverse-engineering.md</code> — source-material analysis.</li>
+      <li><code>design.md</code> — design intent, soundhole strategy, cultural language, brand options.</li>
+      <li><code>family-spec.csv</code> — five-variant table.</li>
+      <li><code>risks.md</code> — red-team risk register.</li>
+      <li><code>bom.csv</code> · <code>sourcing.csv</code> · <code>cut-list.csv</code> · <code>validation.csv</code> — tables.</li>
+      <li><code>assembly-manual.md</code> — 12-stage build sequence.</li>
+      <li><code>supplier-rfq.md</code> · <code>drawing-brief.md</code> · <code>visual-bom-brief.md</code> · <code>photo-shotlist.md</code> — process docs.</li>
+      <li><code>cad/SAM-000_master-equations.txt</code> — global equations (single source of truth).</li>
+      <li><code>cad/SW-MIGRATION-CHECKLIST.md</code> — SolidWorks rebuild plan.</li>
+      <li><code>cnc/cnc-plan.md</code> — pre-CAM operation plan.</li>
+      <li><code>wolfram/sambuca-acoustics-starter.wl</code> — acoustic study notebook.</li>
+      <li><code>harness/README.md</code> — SAM-19 / SAM-25 harness designs.</li>
+      <li><code>capstone-deck.pptx</code> · <code>print-packet.pdf</code> — capstone artifacts.</li>
+      <li><code>learn-to-play/</code> — placeholder; populated by the sheet-music skill after tuning is locked.</li>
+    </ul>
+
+    <h2>Related repos</h2>
+    <ul>
+      <li><a href="https://github.com/tonykoop/kora">kora</a> — parametric template adopted as the MasterLayout pattern.</li>
+      <li><a href="https://github.com/tonykoop/fujara">fujara</a> → <a href="https://github.com/tonykoop/moseno">moseno</a> — earlier Pack-and-Go variant precedent.</li>
+      <li><a href="https://github.com/tonykoop/instrument-showcase">instrument-showcase</a> — portfolio entry point.</li>
+    </ul>
+
+    <footer>
+      <p>Tony Koop · Heifer Zephyr · sambuca · build packet generated 2026-05-16 with the instrument-maker-v4 skill</p>
+      <div class="license-row">
+        <span>Design files: CERN-OHL-W-2.0</span>
+        <span>Written content + media: CC-BY-4.0</span>
+      </div>
+      <p style="margin-top: 14px;">
+        BM 121198 imagery © Trustees of the British Museum, CC BY-NC-SA 4.0 ·
+        Photos: Don Hitchcock 2015 ·
+        Cylinder seal B16728 courtesy Penn Museum, University of Pennsylvania
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+check_id,category,check_name,target,method,instrument,acceptance,owner,gate_block,linked_risk,notes
+V-D-01,dimensional,Body length SAM-13-ROOT,650 mm,measure with steel rule from bow to stern at soundboard centerline,steel rule 0.5 mm resolution,650 +/- 2 mm,builder,no,n/a,Per BM 121198 anchor.
+V-D-02,dimensional,Body width SAM-13-ROOT,150 mm,measure beam at midship soundboard,calipers,150 +/- 2 mm,builder,no,n/a,Per BM anchor.
+V-D-03,dimensional,Body depth SAM-13-ROOT,150 mm,measure profile depth at midship,calipers,140-170 mm,builder,no,n/a,Allowance for 20 mm uncertainty from photo evidence.
+V-D-04,dimensional,Instrument height SAM-13-ROOT,810 mm,measure from gold cap top to keel bottom,steel rule,810 +/- 5 mm,builder,no,n/a,Per BM anchor.
+V-D-05,dimensional,String_holder_strip position from stern,~520 mm (~80% of body length),measure after voicing,steel rule,locked after voicing on MULE,builder,yes,n/a,Voicing decision; locked on MULE then committed to ROOT.
+V-D-06,dimensional,Keel port long axis,80 mm,measure oval long axis,calipers,80 +/- 1 mm,builder,no,n/a,Per master-equations.
+V-D-07,dimensional,Keel port short axis,50 mm,measure oval short axis,calipers,50 +/- 1 mm,builder,no,n/a,Per master-equations.
+V-D-08,dimensional,Keel port forward tilt,15 deg,measure chamfer angle,protractor,12-18 deg,builder,no,n/a,Per master-equations.
+V-D-09,dimensional,Neck arc length,~710 mm,measure along neck centerline from joint reference to cap,flex tape,710 +/- 5 mm,builder,no,n/a,Per master-equations neck_arc_length_mm.
+V-D-10,dimensional,Brass collar height,60 mm,measure collar along neck axis,calipers,60 +/- 1 mm,builder,no,n/a,Per master-equations.
+V-D-11,dimensional,String-holder strip dimensions,120 mm long x 10 mm wide x 4 mm tall,measure strip,calipers,120 +/- 1 / 10 +/- 0.5 / 4 +/- 0.3,builder,no,n/a,Final strip per master-equations.
+V-D-12,dimensional,Tie-through hole pattern,13 holes at string_spacing_mm,measure hole centers,calipers,centers +/- 0.3 mm,builder,no,n/a,Driven by master-equations linear pattern.
+V-D-13,dimensional,Bow-end inlay panel,100 x 60 mm pocket depth 1.5,measure pocket and panel fit,calipers + feeler gauges,panel sits flush +/- 0.1 mm,builder,no,n/a,Per master-equations bow_panel.
+V-D-14,dimensional,Multi-strip lapis band width,~12 mm total composed of 5x1.5 + 4x0.8,measure across band at three locations,calipers,total 11-13 mm strips within 0.2 mm,builder,no,R-F-01,Per master-equations inlay_strip.
+V-T-01,tension,SAM-13-MULE reduced-tension load,40-50 kgf total,tune to spec then sum measured per-string tensions,calibrated strain gauge on test stand,total within 40-50 kgf,structural-test,yes,R-S-01,Validation pre-step for SAM-13-ROOT.
+V-T-02,tension,SAM-13-ROOT calibrated-tension load,65-80 kgf total,tune to G-major spec; sum measured per-string,strain gauge or calibrated tuner + math,total within 65-80 kgf,structural-test,yes,R-S-01,Build target tension calibration. Triggers Wolfram sweep adjustment if outside band.
+V-T-03,tension,SAM-13-ROOT post-30-day tension drift,< 10% drop,re-measure tension after 30 days,strain gauge,< 10% drop on any string,structural-test,no,R-A-02,Tunes stability check.
+V-T-04,tension,SAM-25-CONCERT total tension,90-110 kgf estimated,tune to spec; sum,strain gauge,band locked after Wolfram sweep,structural-test,no,R-S-01,Scaled-up family member.
+V-S-01,structural,Neck-deflection at SAM-13-MULE 30-day hold,< 2 mm at gold cap relative to body,dial indicator + magnetic base reference,direct measurement,< 2 mm,structural-test,yes,R-S-01,The single most critical structural validation.
+V-S-02,structural,Brass collar seasonal gap monitor,< 0.3 mm gap drift over full season,gap-monitor strip at one circumferential position,feeler gauges + photos,< 0.3 mm,structural-test,no,R-S-02,12-month observation window.
+V-S-03,structural,Keel-port keel deflection vs unported case,< 1.5x baseline deflection,beam analysis + MULE measurement,Wolfram + dial indicator,< 1.5x,structural-test,no,R-S-03,Drives internal-brace decision.
+V-S-04,structural,Soundboard pull-test on scrap,2x service load,attach test strip with hide glue + pull to failure,5 kgf scale or load cell,glue holds to >= 2x service load,structural-test,yes,R-S-04,Pre-build validation. Re-do if hide glue source changes.
+V-S-05,structural,Stern eyebolt pull-through,30 kgf for 60 sec,attach eyebolt and load to 30 kgf,calibrated weight bag + load cell,no glue-line movement at 30 kgf for 60 sec,structural-test,yes,R-S-05,SAM-19 / 25 / AE only. Pre-fly safety test.
+V-A-01,acoustic,SAM-13-MULE SPL at 1 m,within 6 dB of Wolfram prediction,SPL meter at 1 m off bow,calibrated SPL meter (Class 2 or better),predicted +/- 6 dB,acoustic-test,no,R-A-01,Quiet-instrument validation. Escalation paths defined in R-A-01.
+V-A-02,acoustic,Coupled cavity-plate pair signature,two peaks split by 30-80 Hz,sweep frequency response,small speaker + reference mic + DAW analysis,two distinct peaks in 100-300 Hz band,acoustic-test,no,R-A-03,Per Wolfram coupled-system prediction.
+V-A-03,acoustic,Tuning drift at 24 hr playing-temperature,< +/- 10 cents per string,re-measure after 24 hr at room temperature,chromatic tuner,< +/- 10 cents,acoustic-test,no,R-A-02,Catches cord-wrap creep.
+V-A-04,acoustic,Helmholtz frequency keel port,~143 Hz +/- 15 Hz,impulse-response measurement at port,microphone + DAW,128-158 Hz,acoustic-test,no,R-A-03,Per Wolfram prediction for the SAM-13-ROOT geometry.
+V-A-05,acoustic,String-holder-strip exact position voicing,best balance of bass/treble response,move strip position incrementally on MULE; record SPL by frequency band,SPL meter + playback,position locked subjectively then re-measured,acoustic-test,yes,R-A-01,Critical voicing step. Strip is glue-on-later for this reason.
+V-J-01,joint,Scarf-and-collar joint integrity at MULE,no visible separation at 30-day hold,visual + magnification,10x loupe,no visible separation,structural-test,yes,R-S-01,Confirms scarf glue line under reduced load.
+V-J-02,joint,Soundboard-to-hull seam under string load,no visible glue-line separation,visual at full tension,10x loupe,no visible separation,structural-test,no,R-S-04,Multi-strip lapis pocket may stress the seam.
+V-J-03,joint,String-holder strip hide-glue bond,full bond no rocking,visual + finger press,n/a,no movement under finger pressure,builder,no,R-S-04,Confirms strip is fully glued before stringing.
+V-E-01,ergonomic,30-minute playing session fatigue check,no muscle fatigue triggering posture drift,timed session with observer + post-session interview,observation + interview notes,player completes session without breaks; postural drift documented,ergonomic-test,no,R-E-01,Documents recommended session length for user guide.
+V-E-02,ergonomic,Keel port impingement at three player postures,port radiates >= 80% of unblocked case,SPL meter at listener position with port unblocked vs typical seated,SPL meter,>= 80% radiation,ergonomic-test,no,R-E-02,Drives documentation of recommended seated posture.
+V-Z-01,safety,Pre-performance harness check (SAM-25),locking hook engaged + tested,visual + hook-load 5 kgf,small hand weight,hook locked and load-tested,player,no,R-Z-02,Per-performance checklist.
+V-Z-02,safety,String breakage protection,fresh strings + 6-month replacement interval,inspect and document,visual,no fraying or wear visible,player,no,R-Z-01,Per-restringing checklist in user guide.
+V-C-01,cultural,Cultural-provenance language advisor review,written sign-off OR revision accepted and re-submitted,submit design.md cultural-provenance section to advisor,n/a,advisor sign-off in writing,external advisor,yes,R-C-01,One of three public-release gates.
+V-C-02,cultural,Imagery attribution audit,all cylinder-seal and BM photos captioned and credited,review every image in deck and site,visual review,every image credited correctly,documentarian,yes,R-C-03,Catches the most common misappropriation issue.
+V-C-03,cultural,Sambyke etymological language review,advisor sign-off on the etymology paragraph,submit with V-C-01,n/a,advisor accepts or revises,external advisor,yes,R-C-02,Combined with V-C-01.
+V-B-01,brand,Heifer Zephyr placement option locked,Option A or B chosen and committed,Tony decision after cultural review,n/a,decision documented,Tony,yes,n/a,One of three public-release gates.
+V-B-02,brand,Brand inlay color match,inlay reads as intentional against base wood,finish-test sample compare,visual + photograph at neutral lighting,reads as intentional,builder + Tony,no,n/a,Pre-production sample.
+
+# Three public-release gates (gate_block = yes and cultural/brand/structural):
+# V-S-01 SAM-13-MULE neck-deflection 30-day hold
+# V-T-02 SAM-13-ROOT calibrated tension (drives Wolfram sweep adjustment)
+# V-C-01 Cultural-provenance advisor review
+# V-B-01 Heifer Zephyr placement locked
+#
+# Voicing decision (V-A-05 / V-D-05): the string-holder strip position is determined
+# empirically on the SAM-13-MULE before it is committed on the SAM-13-ROOT.
+# The strip is mounted with hide glue precisely so this can be done reversibly.

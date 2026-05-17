@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Sambuca - Shop Packet (Print Edition)</title>
+<style>
+@page {
+  size: letter;
+  margin: 0.75in 0.75in 0.9in 0.75in;
+  @bottom-center {
+    content: "Sambuca · SAM-13-ROOT · Fall 2026 capstone · private review · page " counter(page) " of " counter(pages);
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+    font-size: 8pt;
+    color: #6B5E4D;
+  }
+}
+html { font-family: "Source Serif Pro", "Iowan Old Style", Georgia, serif; font-size: 10.5pt; color: #1F1A14; }
+body { line-height: 1.45; max-width: 6.8in; margin: 0 auto; }
+h1 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+     font-size: 22pt; color: #3D2817; margin-top: 0; margin-bottom: 0.2in;
+     border-bottom: 2px solid #D4A017; padding-bottom: 0.06in;
+     page-break-before: always; }
+h1:first-of-type { page-break-before: avoid; }
+h2 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+     font-size: 14pt; color: #3D2817; margin-top: 0.25in; margin-bottom: 0.05in;
+     border-left: 4px solid #1E3A8A; padding-left: 0.08in;
+     page-break-after: avoid; break-after: avoid; }
+h3 { font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+     font-size: 11.5pt; color: #1E3A8A; margin-top: 0.18in; margin-bottom: 0.04in;
+     page-break-after: avoid; break-after: avoid; }
+p { margin: 0.05in 0; }
+blockquote { border-left: 3px solid #B98B47; padding-left: 0.15in;
+             color: #5C4A36; font-style: italic; margin: 0.1in 0; }
+code { font-family: "JetBrains Mono", Menlo, Consolas, monospace; font-size: 9pt;
+       background: #F8F4E9; padding: 0.5pt 3pt; border-radius: 2pt; }
+table { border-collapse: collapse; width: 100%; margin: 0.1in 0;
+        font-size: 9.5pt; page-break-inside: avoid; break-inside: avoid; }
+h2 + p, h2 + ul, h2 + ol, h2 + table,
+h3 + p, h3 + ul, h3 + ol, h3 + table { page-break-before: avoid; break-before: avoid; }
+ul, ol { page-break-inside: avoid; break-inside: avoid; orphans: 4; widows: 4;
+         margin: 0.05in 0 0.05in 0.2in; padding-left: 0.15in; }
+th, td { border: 0.5pt solid #B98B47; padding: 3pt 5pt; vertical-align: top; }
+th { background: #3D2817; color: #F8F4E9; font-weight: 600;
+     font-family: "Source Sans Pro", sans-serif; }
+tr:nth-child(even) td { background: #F8F4E9; }
+li { margin: 1pt 0; }
+hr { border: none; border-top: 0.5pt solid #D4A017; margin: 0.18in 0; }
+strong { color: #1E3A8A; }
+em { color: inherit; }
+a { color: #1E3A8A; text-decoration: none; }
+</style></head>
+<body>
+<h1 id="sambuca-shop-packet-print-edition">Sambuca — Shop Packet (Print Edition)</h1>
+<p><strong>Build target:</strong> SAM-13-ROOT — 650 mm boat-shaped arched harp, 13 strings, G-major.
+<strong>Status:</strong> private review (pending three release gates).
+<strong>Packet version:</strong> instrument-maker-v4, generated 2026-05-16.</p>
+<blockquote>
+<p>This is the printable shop packet. Take it to the bench. Cross-reference back to the live files in the repo when in doubt.</p>
+</blockquote>
+<hr />
+<h2 id="file-map-one-page-reference">File map (one-page reference)</h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Take to bench?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>design.md</code></td>
+<td>Design intent, fingerprint, soundhole strategy, cultural provenance</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>reverse-engineering.md</code></td>
+<td>Source-material analysis</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>family-spec.csv</code></td>
+<td>5-variant table</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>risks.md</code></td>
+<td>Red-team risk register with verification tests</td>
+<td>check before each stage</td>
+</tr>
+<tr>
+<td><code>bom.csv</code></td>
+<td>Make/buy materials and hardware</td>
+<td>yes — ordering</td>
+</tr>
+<tr>
+<td><code>sourcing.csv</code></td>
+<td>Candidate suppliers, planning prices</td>
+<td>yes — ordering</td>
+</tr>
+<tr>
+<td><code>cut-list.csv</code></td>
+<td>Rough and final dimensions for every cut</td>
+<td><strong>yes — bench</strong></td>
+</tr>
+<tr>
+<td><code>validation.csv</code></td>
+<td>Dimensional, tension, acoustic, joint, safety, cultural checks</td>
+<td><strong>yes — bench</strong></td>
+</tr>
+<tr>
+<td><code>assembly-manual.md</code></td>
+<td>12-stage build sequence with hold points</td>
+<td><strong>yes — bench</strong></td>
+</tr>
+<tr>
+<td><code>supplier-rfq.md</code></td>
+<td>RFQ drafts to send out</td>
+<td>yes — ordering</td>
+</tr>
+<tr>
+<td><code>drawing-brief.md</code></td>
+<td>Drawing-package spec</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>cad/SAM-000_master-equations.txt</code></td>
+<td>Global equations (source of truth)</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>cnc/cnc-plan.md</code></td>
+<td>Pre-CAM operation plan per part</td>
+<td><strong>yes — bench</strong></td>
+</tr>
+<tr>
+<td><code>wolfram/sambuca-acoustics-starter.wl</code></td>
+<td>Acoustic study notebook</td>
+<td>reference only</td>
+</tr>
+<tr>
+<td><code>photo-shotlist.md</code></td>
+<td>Capture list across the build</td>
+<td>each stage</td>
+</tr>
+<tr>
+<td><code>harness/README.md</code></td>
+<td>SAM-19 + SAM-25 harness design</td>
+<td>only for those variants</td>
+</tr>
+<tr>
+<td><code>capstone-deck.pptx</code></td>
+<td>Capstone presentation</td>
+<td>not in shop</td>
+</tr>
+<tr>
+<td><code>site/index.html</code></td>
+<td>Build-log site (private until release)</td>
+<td>not in shop</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="design-intent-one-paragraph">Design intent (one paragraph)</h2>
+<p>Modern parametric family-scalable boat-shaped arched harp that preserves the Sumerian visual fingerprint (gold-flared cap, 13 bulb pegs with cord wraps, J-curve neck, multi-strip lapis band, brass collar, bow-end inlay panel, two stern stub feet) while delivering modern playability (geared tuners hidden behind decorative caps, calibrated fluorocarbon + wound-nylon string set at 65–80 kgf, keel-port soundhole projecting forward toward the listener, CNC-machined hull/neck/inlay, kanawa-tsugi stand). Build target SAM-13-ROOT; four siblings (SAM-19-MID, SAM-25-CONCERT, SAM-13-AE, SAM-13-MULE) derive from the same MasterLayout via <code>body_length_mm</code> and <code>string_count</code>.</p>
+<h2 id="cultural-provenance-for-the-public-release-language">Cultural provenance — for the public-release language</h2>
+<p>Inspired by the Sumerian boat-shaped arched harp from BM 121198 (Royal Cemetery at Ur, c. 2600 BC, ~4500 years old, public domain). Not a reproduction, not a recreation of any specific surviving artifact, not a claim of cultural authority over any modern living tradition. The Hellenistic Greek <em>sambykē</em> (σαμβύκη) etymological link is historically contested; the build uses the term while acknowledging the uncertainty.</p>
+<hr />
+<h2 id="family-spec-summary">Family-spec summary</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Body length</th>
+<th>Strings</th>
+<th>Tuning</th>
+<th>Total tension</th>
+<th>Harness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SAM-13-ROOT</strong></td>
+<td>650 mm</td>
+<td>13</td>
+<td>G3 → E5</td>
+<td>65–80 kgf</td>
+<td>none</td>
+</tr>
+<tr>
+<td>SAM-19-MID</td>
+<td>850 mm</td>
+<td>19</td>
+<td>D3 → G5</td>
+<td>~100 kgf est.</td>
+<td>low-back belt</td>
+</tr>
+<tr>
+<td>SAM-25-CONCERT</td>
+<td>1050 mm</td>
+<td>25</td>
+<td>A2 → A5</td>
+<td>~120 kgf est.</td>
+<td>sax harness</td>
+</tr>
+<tr>
+<td>SAM-13-AE</td>
+<td>650 mm</td>
+<td>13</td>
+<td>G3 → E5</td>
+<td>65–80 kgf</td>
+<td>none + piezo</td>
+</tr>
+<tr>
+<td>SAM-13-MULE</td>
+<td>650 mm</td>
+<td>13</td>
+<td>G3 → E5 (reduced T)</td>
+<td>40–50 kgf</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="wood-pairing-locked">Wood pairing (locked)</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Species</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hull (and stand)</td>
+<td>Walnut — FAS quartersawn 8/4</td>
+</tr>
+<tr>
+<td>Soundboard</td>
+<td>Western red cedar — quartersawn AAA 3 mm (Wolfram-sweep 2.5–4.0)</td>
+</tr>
+<tr>
+<td>Neck</td>
+<td>Sapele — three 12 mm laminates around a curved form</td>
+</tr>
+<tr>
+<td>String-holder strip</td>
+<td>Walnut or hard maple</td>
+</tr>
+<tr>
+<td>Bracing</td>
+<td>Cedar (matches soundboard movement)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bom-summary-sam-13-root">BOM summary (SAM-13-ROOT)</h2>
+<p>See full <code>bom.csv</code> for all 44 lines and per-variant deltas. Headline cost: planning estimate <strong>$530–1300 USD</strong> for SAM-13-ROOT, prices not live-verified.</p>
+<p>Highest-risk supply items:</p>
+<ul>
+<li><strong>BOM-018</strong> PVD-gold-tone brass bulb caps (13) — custom part, longest lead. Parallel two-shop search.</li>
+<li><strong>BOM-017</strong> Geared guitar tuners (13) — mock-fit one sample before bulk order to verify <code>neck_depth_mm</code> clearance.</li>
+<li><strong>BOM-007</strong> Bow-end inlay panel (mother-of-pearl or composite) — three-candidate sample compare before commit.</li>
+</ul>
+<h2 id="sourcing-summary">Sourcing summary</h2>
+<p>Spec-first table in <code>sourcing.csv</code>. Three candidate suppliers per line. <strong>No live prices verified — confirm before ordering.</strong></p>
+<p>Order in this sequence to fit the 6–10 week build:</p>
+<ol>
+<li>Week 1: PVD bulb caps (3–5 week lead) + walnut hull stock (2–4 weeks).</li>
+<li>Week 2: sapele neck stock, cedar soundboard, tuners (mock-fit first).</li>
+<li>Week 3: brass collar tube, eyebolts, string sets (after Wolfram sweep).</li>
+<li>Week 4: inlay materials.</li>
+</ol>
+<hr />
+<h2 id="cut-list-build-target-subset">Cut-list (build-target subset)</h2>
+<p>Full table in <code>cut-list.csv</code>. Highlights:</p>
+<table>
+<thead>
+<tr>
+<th>Cut ID</th>
+<th>Part</th>
+<th>Final dims</th>
+<th>Material</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUT-001a or CUT-001b</td>
+<td>Hull</td>
+<td>650 × 150 × 150 mm, wall 6 mm</td>
+<td>Walnut</td>
+<td>A: CNC-from-block. B: stave-laminated. Pick one.</td>
+</tr>
+<tr>
+<td>CUT-009 + CUT-011</td>
+<td>Neck blank</td>
+<td>~810 mm arc, 38 × 38–50 mm cross-section</td>
+<td>Sapele 3-laminate</td>
+<td>Glue → cure 48 hr → CNC sweep</td>
+</tr>
+<tr>
+<td>CUT-005</td>
+<td>Soundboard</td>
+<td>650 × 150 × 3 mm</td>
+<td>Cedar QSAAA</td>
+<td>Final after sanding</td>
+</tr>
+<tr>
+<td>CUT-007</td>
+<td>String-holder strip</td>
+<td>120 × 10 × 4 mm</td>
+<td>Walnut or maple</td>
+<td>Glued <strong>after voicing</strong> on MULE</td>
+</tr>
+<tr>
+<td>CUT-018</td>
+<td>Keel port</td>
+<td>80 × 50 mm oval, 15° forward tilt</td>
+<td>(cut from hull)</td>
+<td>Stage 6</td>
+</tr>
+<tr>
+<td>CUT-014</td>
+<td>Brass collar</td>
+<td>60 mm tall, ~1 mm wall</td>
+<td>Brass tube</td>
+<td>Aged or polished per R-F-02</td>
+</tr>
+<tr>
+<td>CUT-023</td>
+<td>Multi-strip lapis inlay pocket</td>
+<td>5 × 1.5 mm strips + 4 × 0.8 mm spacers</td>
+<td>(route in soundboard)</td>
+<td>0.8 mm end mill</td>
+</tr>
+<tr>
+<td>CUT-026</td>
+<td>Bow-end inlay panel pocket</td>
+<td>100 × 60 × 1.5 mm</td>
+<td>(route in soundboard)</td>
+<td>Per <code>bow_panel_x_from_stern_mm</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="drawing-brief-callout">Drawing brief callout</h2>
+<p>Minimum drawings required for the Fall 2026 capstone (see <code>drawing-brief.md</code> for the full 22-sheet list):</p>
+<ul>
+<li>Sheet 01 — Overview front</li>
+<li>Sheet 02 — Overview side (shows bow lift + keel port)</li>
+<li>Sheet 10 — Soundboard inlay program</li>
+<li>Sheet 18 — Family overview</li>
+</ul>
+<p>Source of truth: <code>cad/SAM-000_master-equations.txt</code>. SVGs are generated from SolidWorks once the rebuild per <code>cad/SW-MIGRATION-CHECKLIST.md</code> clears.</p>
+<hr />
+<h2 id="assembly-stages-one-line-summary-each">Assembly stages (one-line summary each)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Stage</th>
+<th>Hold?</th>
+<th>Critical risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pre-build (sourcing, fixtures, tuner mock-fit)</td>
+<td>yes — R-X-04 mock-fit before cutting stock</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Hull (Path A or Path B)</td>
+<td>yes — wall thickness verified</td>
+<td>R-S-04</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Neck blank (laminate + CNC sweep)</td>
+<td>yes — scarf cut clean</td>
+<td>R-S-01</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Soundboard (3 mm cedar, fan brace, inlay pockets cut not filled)</td>
+<td>yes</td>
+<td>R-F-01</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hull seam scarf + brass collar</td>
+<td><strong>yes — V-J-01 at 24h and 48h</strong></td>
+<td>R-S-01</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Soundboard installation + inlay filling</td>
+<td>yes</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Keel port cut</td>
+<td>yes — V-S-03 decision</td>
+<td>R-S-03</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Stand (CNC-curve + kanawa-tsugi)</td>
+<td>parallel</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Tuners + cord wraps + bulb caps</td>
+<td>yes — fingerprint complete</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>String-holder strip + prototype voicing on MULE</td>
+<td><strong>yes — V-A-05 voicing decision</strong></td>
+<td>R-A-01</td>
+</tr>
+<tr>
+<td>10</td>
+<td>MULE 30-day hold + ROOT gradual stringing</td>
+<td><strong>GATE — V-S-01 + V-T-02</strong></td>
+<td>R-S-01 + R-S-04</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Final voicing + acoustic measurement</td>
+<td>yes — V-A-01</td>
+<td>R-A-01</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Documentation + brand integration</td>
+<td>yes — V-C-01 + V-B-01</td>
+<td>R-C-01</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Full manual at <code>assembly-manual.md</code>. Read it before starting.</p>
+</blockquote>
+<hr />
+<h2 id="validation-tuning-sheet-printable">Validation / tuning sheet (printable)</h2>
+<p>Full table in <code>validation.csv</code>. Bench-side highlights:</p>
+<h3 id="dimensional-checks-v-d-01-through-v-d-14">Dimensional checks (V-D-01 through V-D-14)</h3>
+<ul>
+<li>[ ] Body length 650 ± 2 mm</li>
+<li>[ ] Body width 150 ± 2 mm</li>
+<li>[ ] Body depth 140–170 mm</li>
+<li>[ ] Instrument height 810 ± 5 mm</li>
+<li>[ ] Hull-wall thickness 6 ± 0.5 mm at midship, bow, stern</li>
+<li>[ ] Neck arc 710 ± 5 mm</li>
+<li>[ ] Brass collar 60 ± 1 mm</li>
+<li>[ ] String-holder strip 120 × 10 × 4 mm</li>
+<li>[ ] Tie-through holes 13, ±0.3 mm spacing, Φ1.5 mm</li>
+<li>[ ] Multi-strip lapis band 11–13 mm total width</li>
+<li>[ ] Bow-end inlay panel 100 × 60 × 1.5 mm pocket</li>
+<li>[ ] Keel port 80 × 50 mm, 12–18° forward tilt</li>
+</ul>
+<h3 id="structural-checks-v-s-01-through-v-s-05">Structural checks (V-S-01 through V-S-05)</h3>
+<ul>
+<li>[ ] SAM-13-MULE 30-day neck-deflection ≤ 2 mm at gold cap</li>
+<li>[ ] Brass collar gap monitor ≤ 0.3 mm over a season</li>
+<li>[ ] Soundboard pull-test holds 2× service load</li>
+<li>[ ] Stern eyebolt holds 30 kgf for 60 s (SAM-19/25/AE only)</li>
+<li>[ ] Keel-port keel deflection ≤ 1.5× unported case</li>
+</ul>
+<h3 id="tension-checks-v-t-01-through-v-t-04">Tension checks (V-T-01 through V-T-04)</h3>
+<ul>
+<li>[ ] MULE total 40–50 kgf</li>
+<li>[ ] ROOT total 65–80 kgf (calibrated)</li>
+<li>[ ] ROOT 30-day tension drift &lt; 10%</li>
+</ul>
+<h3 id="acoustic-checks-v-a-01-through-v-a-05">Acoustic checks (V-A-01 through V-A-05)</h3>
+<ul>
+<li>[ ] SPL at 1 m within ±6 dB of Wolfram prediction</li>
+<li>[ ] Coupled cavity-plate pair signature (two peaks split 30–80 Hz)</li>
+<li>[ ] Tuning drift &lt; ±10 cents per string at 24 hr</li>
+<li>[ ] Keel-port Helmholtz 128–158 Hz</li>
+<li>[ ] String-holder strip position locked after voicing</li>
+</ul>
+<h3 id="cultural-brand-gates-v-c-01-through-v-b-02">Cultural + brand gates (V-C-01 through V-B-02)</h3>
+<ul>
+<li>[ ] Cultural-advisor sign-off on provenance language</li>
+<li>[ ] Every BM 121198 and cylinder-seal image credited</li>
+<li>[ ] Heifer Zephyr placement option locked</li>
+</ul>
+<hr />
+<h2 id="supplier-rfq-summary">Supplier-RFQ summary</h2>
+<p>Send these RFQs in week 1. Full drafts in <code>supplier-rfq.md</code>.</p>
+<table>
+<thead>
+<tr>
+<th>RFQ</th>
+<th>To</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RFQ-1</td>
+<td>Wood supplier</td>
+<td>Walnut hull stock, walnut 12/4 base, cedar soundboard (2.5 + 3.0 mm), sapele neck stock, cherry brace stock, holly/maple spacer veneer</td>
+</tr>
+<tr>
+<td>RFQ-2</td>
+<td>Brass/stainless supplier</td>
+<td>Brass tube for collar (×2 for spare), stainless dowel pins, stainless eyebolts, brass rod for cap turning</td>
+</tr>
+<tr>
+<td>RFQ-3</td>
+<td>String supplier</td>
+<td>Set A (G-major calibrated, 13 strings), Set B (A-major drop-in), Set C (MULE reduced tension)</td>
+</tr>
+<tr>
+<td>RFQ-4</td>
+<td>Tuner supplier + PVD finisher</td>
+<td>13 compact-housing geared tuners + 13 PVD-gold-tone bulb caps (custom-machined or sourced)</td>
+</tr>
+<tr>
+<td>RFQ-5</td>
+<td>Inlay supplier</td>
+<td>Dyed-blue veneer (5 strips × 3 m), holly/maple spacer, MOP/shell composite panel (3 samples for compare), brand inlay stock</td>
+</tr>
+<tr>
+<td>RFQ-6</td>
+<td>Harness supplier</td>
+<td>Low-back belt + locking hook (SAM-19), sax harness + locking hook (SAM-25)</td>
+</tr>
+<tr>
+<td>RFQ-7</td>
+<td>Electronics supplier</td>
+<td>Under-strip piezo + 1/4" jack + wiring (SAM-13-AE only)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="visual-bom-brief">Visual BOM brief</h2>
+<p>One-page visual BOM lives in <code>visual-bom-brief.md</code> plus the rendered visual (placeholder until the photo set is captured). Print last, when the SAM-13-ROOT is finished and photographed.</p>
+<hr />
+<h2 id="appendix-risks-worth-a-second-look-before-each-stage">Appendix — risks worth a second look before each stage</h2>
+<ul>
+<li><strong>R-S-01 Neck cantilever failure</strong> — <em>the</em> single highest risk. Hold the MULE for the full 30 days before stringing the ROOT.</li>
+<li><strong>R-S-04 Soundboard collapse</strong> — pull-test the string-holder-strip glue line on scrap cedar before mounting the production strip.</li>
+<li><strong>R-S-05 Eyebolt pull-through</strong> — only matters for SAM-19/25/AE, but it's a safety gate when it does.</li>
+<li><strong>R-A-01 Quiet voice on SAM-13-ROOT</strong> — the small 3.8 L cavity is the chronic concern. Wolfram-sweep before committing soundboard thickness; iterate on MULE.</li>
+<li><strong>R-C-01 Cultural-advisor review</strong> — public-release gate. Submit the provenance language early; don't wait until Stage 12.</li>
+<li><strong>R-X-03 PVD bulb caps</strong> — longest-lead supply item. Order in week 1.</li>
+</ul>
+<hr />
+<h2 id="public-release-gate-checklist-final-page">Public-release gate checklist (final page)</h2>
+<ul>
+<li>[ ] V-S-01 SAM-13-MULE neck-deflection 30-day hold passed</li>
+<li>[ ] V-T-02 SAM-13-ROOT calibrated-tension target hit (65–80 kgf)</li>
+<li>[ ] V-C-01 Cultural-provenance advisor review signed off</li>
+<li>[ ] V-B-01 Heifer Zephyr placement option locked (A soundboard or B stand)</li>
+<li>[ ] R-S-05 SAM-25 eyebolt pull-test passed (if SAM-25 in release scope)</li>
+<li>[ ] All <code>validation.csv</code> cultural-category rows closed (V-C-01, V-C-02, V-C-03)</li>
+<li>[ ] <code>site/index.html</code> private-review banner removed</li>
+<li>[ ] <code>README.md</code> updated to public-release language</li>
+<li>[ ] License files in place (CERN-OHL-W-2.0 for design, CC-BY-4.0 for content)</li>
+</ul>
+<hr />
+<p><em>Tony Koop · Heifer Zephyr · Sambuca SAM-13-ROOT · Fall 2026 capstone · private review</em>
+  </p>
+</body></html>

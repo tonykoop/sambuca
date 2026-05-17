@@ -1,0 +1,53 @@
+part_id,category,part_name,material_spec,qty_per_unit,unit,SAM-13-ROOT,SAM-19-MID,SAM-25-CONCERT,SAM-13-AE,SAM-13-MULE,make_buy,planning_cost_usd,notes
+BOM-001,hull,Hull billet or stave stock,Walnut FAS or QSWO equivalent kiln-dried 8/4,1,ea,1,1,1,1,1,buy,80-180,Single billet for CNC-from-block OR ~10 staves for stave-laminated. Cost flag: planning-estimate.
+BOM-002,hull,Internal hull braces,Cherry 6mm sticks,2,ea,2,3,4,2,2,make,5-12,Fore and aft of keel port. Cost flag: planning-estimate.
+BOM-003,hull,Stern stub feet,Walnut block 30 x 25 x 15 mm,2,ea,2,2,2,2,2,make,negligible,Cut from hull offcuts. Two integral feet at stern keel.
+BOM-004,soundboard,Soundboard panel,Western red cedar quartersawn 3 mm,1,ea,1,1,1,1,1,buy,30-60,2.5-4.0 mm sweep in Wolfram before locking. Cost flag: planning-estimate.
+BOM-005,soundboard,Soundboard braces,Cedar fan-brace stock 3 x 8 mm,4,ea,4,5,6,4,4,make,negligible,Light fan pattern under string-holder strip. Cut from soundboard offcuts.
+BOM-006,soundboard,String-holder strip,Walnut or hard maple 10 x 4 mm,1,ea,1,1,1,1,1,make,5-10,Glued to soundboard with hide glue. Reversible position during voicing on MULE.
+BOM-007,soundboard,Bow-end inlay panel,Mother-of-pearl OR shell composite tile,1,ea,1,1,1,1,1,buy,15-60,100 x 60 mm pale rectangular inlay at the bow. Material per finish-test pick.
+BOM-008,neck,Neck laminate stock,Sapele quartersawn 8/4 or three 12mm laminates,1,ea,1,1,1,1,1,buy,40-90,Laminate-and-bend then CNC. Three 12 mm laminates preferred for curve.
+BOM-009,neck,Neck-body brass collar,Brass tube or sheet, 60 mm tall x 0.8-1.2 mm wall,1,ea,1,1,1,1,1,buy,15-40,Aged/patinated finish per R-F-02. Source: McMaster brass tube or Online Metals brass sheet.
+BOM-010,neck,Neck-body scarf joint pin,Stainless 6 mm dowel,1,ea,1,1,1,1,1,buy,2,Hidden through both members.
+BOM-011,inlay,Lapis-look multi-strip veneer set,Lapis-blue dyed veneer + holly/maple spacer,1,set,1,1,1,1,1,buy,25-50,5 strips x 1.5 mm wide + 0.8 mm spacers. Single-pass CNC routed pocket.
+BOM-012,inlay,Epoxy filler for inlay,West System or System Three slow-cure epoxy,1,kit,1,1,1,1,1,buy,15-30,Tints with dye to match strip color where needed.
+BOM-013,inlay,Heifer Zephyr brand inlay stock,Brass-leaf veneer + dark-walnut spacer (Opt A) OR matching lapis (Opt B),1,set,1,1,1,1,1,buy,10-25,Placement TBD per brand integration gate.
+BOM-014,strings,Fluorocarbon string set,SAM-13-ROOT calibrated set (treble strings 5-13),1,set,1,1,1,1,1,buy,30-50,Fluorocarbon trebles. G-major build target. A-major retune set documented separately.
+BOM-015,strings,Wound nylon string set,SAM-13-ROOT calibrated bass set (strings 1-4),1,set,1,1,1,1,1,buy,25-45,Wound nylon basses bring total tension into 65-80 kgf target band.
+BOM-016,strings,A-major retune string set (optional),Drop-in fluorocarbon + wound nylon set,1,set,1,1,1,1,1,buy,55-95,Documented in supplier-rfq.md. Optional sibling SKU.
+BOM-017,tuners,Geared guitar tuners,Compact-housing harp/classical-guitar tuner with hidden gear,13,ea,13,19,25,13,13,buy,40-180,Per family-spec string_count. Compact-housing variant per R-X-04 mock-fit.
+BOM-018,tuners,PVD-gold-tone brass bulb caps,Custom-machined brass cap + PVD finish,13,ea,13,19,25,13,13,buy,60-260,~$5-10 ea custom-machined. Source decision per R-X-03.
+BOM-019,tuners,Decorative tuner cord wrap,Aged-look waxed silk or sinew-look cord 1 mm,1,spool,1,1,1,1,1,buy,8-15,~8 turns per peg. Visual fingerprint element per second-photo-set observation.
+BOM-020,keelport,Keel-port surround (optional binding),Walnut binding strip 3 x 6 mm,1,ea,1,1,1,0,1,make,3-6,Optional decorative binding around the oval keel-port edge. SAM-13-AE skips if pickup jack uses the port area.
+BOM-021,stern_hw,Stern eyebolt,M6 x 40 mm stainless forged eyebolt,1,ea,0,1,1,1,0,buy,4-8,SAM-13-ROOT and SAM-13-MULE skip. SAM-19/25/AE include for harness or strap-mount.
+BOM-022,stern_hw,Stern eyebolt backing plate,Hardwood 10 x 25 x 40 mm walnut,1,ea,0,1,1,1,0,make,negligible,Cut from hull offcuts. Glued to inside of hull.
+BOM-023,electronics,Under-strip piezo transducer,K&K Pure Mini or equivalent,1,ea,0,0,0,1,0,buy,75-110,SAM-13-AE only.
+BOM-024,electronics,Output jack,1/4 inch barrel jack panel-mount,1,ea,0,0,0,1,0,buy,8-15,Hidden in stern stub on SAM-13-AE.
+BOM-025,electronics,Internal wiring + shrinkwrap,Stranded 22 AWG + heatshrink,1,kit,0,0,0,1,0,buy,5-10,SAM-13-AE only.
+BOM-026,harness,Low-back positioning belt,50-75 mm padded waist belt with side D-rings,1,ea,0,1,0,0,0,buy,35-65,SAM-19-MID only. Climbing/work positioning belt repurposed.
+BOM-027,harness,Saxophone-style harness,Padded shoulder yoke with sternum strap,1,ea,0,0,1,0,0,buy,45-95,SAM-25-CONCERT only. BG S40SH or equivalent.
+BOM-028,harness,Locking hook for harness,Locking carabiner-class snap hook,1,ea,0,1,1,0,0,buy,10-20,Per R-Z-02 specifies locking not snap-only.
+BOM-029,harness,Adjustable tether strap (SAM-19),1 in nylon webbing with cam buckle 600 mm,1,ea,0,1,0,0,0,buy,8-15,Belt-to-stern tether on SAM-19-MID.
+BOM-030,stand,Stand uprights,Walnut quartersawn 8/4 CNC-curve-profiled,2,ea,2,2,2,2,2,make,30-60,CNC curve-profiled cradle uprights matching keel curvature.
+BOM-031,stand,Stand base,Walnut 12/4 with kanawa-tsugi or mitsuke-aritsugi joinery,1,ea,1,1,1,1,1,make,25-50,Japanese joinery at straight intersections.
+BOM-032,stand,Stand felt pads,Adhesive-back industrial felt 3 mm,1,kit,1,1,1,1,1,buy,3-5,Between uprights and keel.
+BOM-033,fasteners,Hide glue (hot or fish),Liquid hide glue or hot hide pellets 250 g,1,kit,1,1,1,1,1,buy,12-25,For string-holder strip and reversible joints.
+BOM-034,fasteners,Wood glue (Titebond III or equivalent),Yellow PVA glue 8 oz,1,kit,1,1,1,1,1,buy,8-12,For non-reversible joints.
+BOM-035,fasteners,Two-part epoxy,30-min cure 8 oz,1,kit,1,1,1,1,1,buy,10-18,For brass-to-wood and high-stress glue lines.
+BOM-036,finish,Oil + wax finish,Tried-and-true Original or Osmo Polyx-Oil 0.5 L,1,kit,1,1,1,1,1,buy,15-30,Hull + neck finish.
+BOM-037,finish,Soundboard finish (separate),Hard shellac (1 lb cut) or thin oil 250 ml,1,kit,1,1,1,1,1,buy,10-20,Soundboard wants a thin finish that doesn't damp.
+BOM-038,finish,Brass polish + PVD-friendly cleaner,Cape Cod cloth + IPA wipe-down,1,kit,1,1,1,1,1,buy,8-15,Pre-PVD prep for caps.
+BOM-039,tooling,CNC inlay end mill 0.8-1.0 mm,Solid carbide 2-flute,2,ea,2,2,2,2,2,buy,12-30,Spare in case of breakage on multi-strip band.
+BOM-040,tooling,CNC profile bits (hull profile),1/4 in 2-flute upcut + 1/8 in detail bit,1,kit,1,1,1,1,1,buy,40-80,Already in Maker Nexus shop inventory.
+BOM-041,tooling,Hide glue brush + heating cup,Natural-bristle brush + small glue pot,1,kit,1,1,1,1,1,buy,15-30,For hot-hide glue option.
+BOM-042,jigs,Soundboard pull-test fixture,Plywood + 5 kgf gauge,1,ea,1,1,1,1,1,make,15-30,Validates R-S-04 string-holder-strip glue strength on scrap.
+BOM-043,jigs,Neck-deflection measurement jig,Dial indicator + magnetic base,1,ea,1,1,1,1,1,buy,40-80,For SAM-13-MULE 30-day hold (R-S-01).
+BOM-044,jigs,String-holder strip positioning fixture,Cedar scrap + slotted aluminum bar,1,ea,1,1,1,1,1,make,negligible,Holds the strip at adjustable positions during prototype voicing.
+
+# Cost flag for the whole BOM: planning-estimate. Live supplier prices not verified.
+# Total per-variant planning estimate range:
+# SAM-13-ROOT: ~530-1300 USD
+# SAM-19-MID: ~620-1500 USD (adds belt + 6 extra tuners + 6 extra caps)
+# SAM-25-CONCERT: ~750-1850 USD (adds sax harness + 12 extra tuners + 12 extra caps)
+# SAM-13-AE: ~620-1450 USD (adds piezo + jack + wiring)
+# SAM-13-MULE: ~470-1150 USD (test mule; no harness hardware, reduced string set OK)

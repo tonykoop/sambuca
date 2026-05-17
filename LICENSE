@@ -1,0 +1,95 @@
+Sambuca — Dual License
+
+Copyright (c) 2026 Tony Koop / Heifer Zephyr.
+
+This repository is dual-licensed by content type:
+
+1. DESIGN FILES — CERN Open Hardware Licence Version 2 – Weakly Reciprocal
+   (SPDX: CERN-OHL-W-2.0)
+
+   Applies to the parametric design and everything from which a physical
+   sambuca can be made. Specifically:
+
+     - cad/                      (SolidWorks parts, equations file, design table)
+     - drawings/                 (SVGs, manufacturing drawings)
+     - cnc/                      (CNC operation plans)
+     - harness/                  (harness assembly designs)
+     - bom.csv
+     - sourcing.csv
+     - cut-list.csv
+     - validation.csv
+     - family-spec.csv
+
+   See LICENSE-design.txt for the full license text, or:
+   https://spdx.org/licenses/CERN-OHL-W-2.0.html
+
+2. WRITTEN CONTENT AND MEDIA — Creative Commons Attribution 4.0 International
+   (SPDX: CC-BY-4.0)
+
+   Applies to documentation, photographs, the capstone deck, the printed
+   shop packet, the build-log site, and any other narrative or media
+   content. Specifically:
+
+     - README.md
+     - design.md
+     - reverse-engineering.md
+     - risks.md
+     - assembly-manual.md
+     - supplier-rfq.md
+     - drawing-brief.md
+     - visual-bom-brief.md
+     - photo-shotlist.md
+     - capstone-deck.md
+     - capstone-deck.pptx
+     - capstone-manifest.json
+     - print-packet.md
+     - print-packet.html
+     - print-packet.pdf
+     - site/
+     - images/             (Tony's own photographs; third-party imagery
+                            retains its own license as noted in captions)
+     - learn-to-play/
+
+   See LICENSE-content.txt for the full license text, or:
+   https://spdx.org/licenses/CC-BY-4.0.html
+
+3. WOLFRAM AND SCRIPT FILES — same as the file type they primarily belong to.
+
+   - wolfram/*.wl is licensed under CERN-OHL-W-2.0 (it is part of the design
+     model; modifications and derivatives should remain open hardware).
+   - Any future scripts in scripts/ or tooling/ are licensed under
+     CC-BY-4.0 unless the file itself carries a contrary header.
+
+THIRD-PARTY MATERIAL
+
+This repository references and credits third-party material that retains
+its own license:
+
+  - British Museum object 121198 photographs — © Trustees of the British
+    Museum, CC BY-NC-SA 4.0. Photos by Don Hitchcock, 2015.
+  - Herbology Manchester profile photo of BM 121198 — used with permission,
+    via Tony Koop's direct upload, 2026-05-16.
+  - Penn Museum object 47880 / B16728 (cylinder seal) imagery — courtesy
+    Penn Museum, University of Pennsylvania.
+  - Kora MasterLayout parametric template — Tony Koop, prior work, adopted
+    as the structural pattern.
+
+ATTRIBUTION REQUIREMENT
+
+When you reuse files from this repository, please attribute as follows:
+
+  "Sambuca" — Tony Koop / Heifer Zephyr.
+  Source: https://github.com/tonykoop/sambuca
+  Licensed dual: CERN-OHL-W-2.0 (design) / CC-BY-4.0 (content).
+
+A short link plus the project name is enough; a longer caption is welcomed
+in deck slides, articles, and exhibits.
+
+NO WARRANTY
+
+Both licenses include explicit disclaimers of warranty and limitations of
+liability. See the individual license files for the full text. In short:
+the sambuca design and documentation are provided "as is." Build at your
+own risk; verify all dimensions and tensions before stringing any
+instrument; respect the cultural-provenance language in design.md when
+representing the work publicly.

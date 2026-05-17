@@ -1,0 +1,53 @@
+cut_id,parent_part,description,material,rough_length_mm,rough_width_mm,rough_thickness_mm,final_length_mm,final_width_mm,final_thickness_mm,qty,grain_orientation,workholding,hull_option,notes
+CUT-001a,BOM-001,Hull billet CNC-from-block,Walnut FAS 8/4,700,200,200,650,150,wall_6,1,longitudinal,vacuum chuck + machinable fixture,A_block,SAM-13-ROOT root mode. Hollow out with 1/4 in upcut then 1/8 in finishing pass. Wall thickness from hull_wall_mm=6.
+CUT-001b,BOM-001,Hull stave CNC-from-block,Walnut FAS 8/4,700,80,30,650,scaled,8,10,longitudinal,stave-clamp fixture,B_staves,SAM-13-ROOT stave-laminated option. 10 staves bent and glued around a buck. Final hull-wall 6 mm after CNC pass.
+CUT-002,BOM-002,Hull internal brace fore,Cherry,200,12,12,180,10,10,1,longitudinal,small parts vise,both,Fore of keel port. Glued to inside of hull before soundboard.
+CUT-003,BOM-002,Hull internal brace aft,Cherry,200,12,12,180,10,10,1,longitudinal,small parts vise,both,Aft of keel port. Glued to inside of hull before soundboard.
+CUT-004,BOM-003,Stern stub foot,Walnut (from CUT-001 offcuts),40,30,20,30,25,15,2,longitudinal,small parts vise,both,Glued and pinned to keel from inside the hull near stern.
+CUT-005,BOM-004,Soundboard panel,Western red cedar QSAAA,700,200,4,650,150,3,1,longitudinal,vacuum table or low-tack tape,both,SAM-13-ROOT. Soundboard finish dimension 3 mm; final after sanding.
+CUT-006,BOM-005,Soundboard fan brace,Cedar,200,10,4,180,8,3,4,longitudinal,small parts vise,both,Light fan pattern under string-holder strip.
+CUT-007,BOM-006,String-holder strip,Walnut OR hard maple,150,12,6,120,10,4,1,longitudinal,double-sided tape on flat board for CNC,both,Drill 13 tie-through holes at string_spacing_mm. Position fine-tuned during voicing.
+CUT-008,BOM-007,Bow-end inlay panel pocket,Mother-of-pearl OR shell composite,(panel is bought to size),105,65,2,100,60,1.5,1,n/a,bought to size,both,Pocket cut into soundboard at bow_panel_x_from_stern_mm.
+CUT-009,BOM-008,Neck laminate strip,Sapele QS 8/4 ripped to 12mm,810,42,12,810,38,12,3,longitudinal,laminating jig,both,Three strips glued in laminating jig with neck_curve_radius_mm form. Cure 24 hr.
+CUT-010,BOM-008,Neck blank after laminating,Sapele 3-laminate,810,42,40,810,38,38_to_50,1,n/a,laminating jig,both,Glued laminate stack. Cures clamped to curve form. Final cross-section 38x38 to 38x50.
+CUT-011,BOM-008,Neck CNC sweep,Sapele laminated blank,(same as CUT-010),(same),(same),810,38,38_to_50,1,n/a,custom curved fixture,both,Sweep CNC operation per neck_arc_length_mm and neck_curve_radius_mm. 3-axis with rotary indexing.
+CUT-012,BOM-008,Neck-to-body scarf joint cut,Sapele neck base,80,50,38,80,50,38,1,joint plane,scarf jig,both,8:1 scarf at base of neck. Mates with reciprocal cut on hull bow stern.
+CUT-013,BOM-001,Hull mating scarf cut,Walnut hull at stern,80,50,38,80,50,38,1,joint plane,scarf jig,both,Reciprocal of CUT-012. Cut after hull profile finishes.
+CUT-014,BOM-009,Brass collar tube section,Brass 60mm tall 1 mm wall,80,(tube_OD),(tube_OD),60,(joint_OD),wall_1,1,n/a,brass cutting fixture,both,Cut from brass tube stock. Slip-fit over scarf joint.
+CUT-015,BOM-009,Brass collar mounting holes,Through-collar dowel hole,n/a,n/a,n/a,(hole_only),(hole_only),6,1,n/a,collar in soft jaws,both,6 mm through-hole for hidden stainless pin.
+CUT-016,BOM-010,Scarf joint hidden pin,Stainless 6 mm dowel,80,6,6,80,6,6,1,n/a,small parts vise,both,Pushed through brass collar + both wood members.
+CUT-017,BOM-020,Keel port surround binding,Walnut binding,300,6,3,oval_perimeter_mm,6,3,1,bent,steam-bend on form,both,Optional. Bent to oval keel-port perimeter ~260 mm. Steam-bend or kerf-bend.
+CUT-018,BOM-001,Keel port cut,Walnut hull (the hole),n/a,n/a,n/a,keel_port_long*keel_port_short,n/a,n/a,1,n/a,(remove material),both,80 x 50 mm oval cut. Forward-tilt 15 deg per keel_port_forward_tilt_deg.
+CUT-019,BOM-022,Stern eyebolt backing plate,Hardwood (walnut from offcut),60,30,15,40,25,10,1,longitudinal,small parts vise,both,SAM-19 / 25 / AE only. Glued inside hull at stern centerline above keel.
+CUT-020,BOM-030,Stand upright,Walnut QS 8/4,300,80,40,275,60,30,2,longitudinal,CNC fixture,both,CNC-curve-profiled cradle. Mirror pair.
+CUT-021,BOM-031,Stand base,Walnut 12/4,300,150,80,275,120,60,1,longitudinal,CNC fixture,both,Kanawa-tsugi or mitsuke-aritsugi joinery at upright intersections.
+CUT-022,BOM-031,Stand kanawa-tsugi key,Walnut (from base offcut),60,15,15,50,12,12,2,longitudinal,small parts vise,both,Two keys (one per upright). Cut after base and uprights are joined dry-fit.
+CUT-023,BOM-039,CNC inlay multi-strip pocket,Walnut hull seam,n/a,n/a,n/a,inlay_band_perimeter,inlay_band_width,inlay_band_depth,1,follows seam,vacuum or fixture,both,5 parallel passes with 0.8-1.0 mm end mill. Total band ~12 mm wide.
+CUT-024,BOM-011,Lapis-look strip stock,Dyed-blue veneer 1.5 mm thick,1000,15,1.5,inlay_band_perimeter,1.5,1.5,5,longitudinal,double-sided tape,both,Cut to band perimeter length; 5 strips per band.
+CUT-025,BOM-011,Inlay spacer stock,Holly or maple 0.8 mm thick,1000,15,0.8,inlay_band_perimeter,0.8,0.8,4,longitudinal,double-sided tape,both,Between the 5 lapis strips.
+CUT-026,BOM-007,Bow-end panel pocket cut,Soundboard cedar,n/a,n/a,n/a,100,60,1.5,1,n/a,vacuum table,both,Pocket cut at bow_panel_x_from_stern_mm. Panel inset.
+CUT-027,BOM-013,Heifer Zephyr wordmark pocket,(varies per option),n/a,n/a,n/a,80,14,1.5,1,n/a,vacuum table,both,Option A only (soundboard placement) - cut into soundboard stern of string-holder strip.
+CUT-028,BOM-013,Heifer Zephyr stand wordmark pocket,Walnut stand base,n/a,n/a,n/a,120,18,1.5,1,n/a,fixture,both,Option B only (stand placement) - cut into stand base front face.
+# ----- Family-scaling cut-list deltas -----
+CUT-101,BOM-001,Hull billet SAM-19-MID,Walnut FAS 8/4,910,260,260,850,196,wall_6_scaled,1,longitudinal,vacuum chuck + machinable fixture,A_block,Same as CUT-001a scaled by scale_factor 1.31.
+CUT-102,BOM-001,Hull billet SAM-25-CONCERT,Walnut FAS 8/4,1120,310,310,1050,242,wall_6_scaled,1,longitudinal,vacuum chuck + machinable fixture,A_block,Same as CUT-001a scaled by scale_factor 1.62.
+CUT-103,BOM-008,Neck blank SAM-19-MID,Sapele 3-laminate,1100,50,50,1060_calc,42_calc,scaled,1,n/a,laminating jig + scaled fixture,both,Scaled neck arc length per master-equations.
+CUT-104,BOM-008,Neck blank SAM-25-CONCERT,Sapele 3-laminate,1370,55,55,1310_calc,48_calc,scaled,1,n/a,laminating jig + scaled fixture,both,Scaled neck arc length per master-equations.
+CUT-105,BOM-006,String-holder strip SAM-19-MID,Walnut OR hard maple,200,12,6,157,10,4,1,longitudinal,double-sided tape,both,Length scaled by scale_factor 1.31. 19 tie-through holes.
+CUT-106,BOM-006,String-holder strip SAM-25-CONCERT,Walnut OR hard maple,250,12,6,194,10,4,1,longitudinal,double-sided tape,both,Length scaled by scale_factor 1.62. 25 tie-through holes.
+# ----- Fixtures, jigs, templates -----
+CUT-201,BOM-042,Soundboard pull-test fixture base,Plywood 12 mm,400,400,12,400,400,12,1,n/a,n/a,n/a,Used for R-S-04 validation. Re-usable.
+CUT-202,BOM-043,Neck-deflection jig base,Aluminum 1/2 in flatbar,300,40,12,300,40,12,1,n/a,n/a,n/a,Mounts dial indicator. Re-usable.
+CUT-203,BOM-044,String-holder strip positioning fixture,Cedar scrap + slotted Al bar,200,40,4,180,30,3,1,n/a,n/a,n/a,Holds strip at adjustable positions during prototype voicing. Re-usable across MULE / ROOT / AE builds.
+CUT-204,n/a,Laminating jig form,MDF + plywood layers,900,400,50,810,300,50,1,n/a,n/a,n/a,One-time fixture. Holds the three sapele laminates to neck_curve_radius_mm during cure.
+CUT-205,n/a,Soundboard inlay template,Plywood or acrylic,700,200,4,650,150,3,1,n/a,n/a,n/a,1:1 template for inlay band route + bow panel pocket + wordmark pocket positions.
+
+# Hull option flag:
+#   A_block  = CNC-from-block (single billet)
+#   B_staves = stave-laminated (10 staves around a buck)
+# Both options produce the same final geometry; choose based on stock availability and shop preference.
+# Stave-laminated uses less wood total but adds 2-3 days of glue-up time and a buck fixture.
+# CNC-from-block is wood-wasteful but single-setup; cleaner for the v4 capstone schedule.
+#
+# Final-dimension columns marked "scaled" or "_calc" derive from cad/SAM-000_master-equations.txt
+# and the family-spec.csv row for the variant. Do not hard-code; pull from the design table.

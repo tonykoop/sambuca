@@ -1,0 +1,22 @@
+# SolidWorks
+*.SLDPRT.bak
+*.SLDASM.bak
+*.swp
+~$*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Build outputs
+*.tmp
+*.log
+*.cache
+
+# Local-only experiments
+/scratch/
+/local-*/

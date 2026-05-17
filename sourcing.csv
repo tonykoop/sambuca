@@ -1,0 +1,42 @@
+part_id,part_name,spec_summary,candidate_supplier_1,candidate_supplier_2,candidate_supplier_3,lead_time_estimate,price_assumption_flag,notes
+BOM-001,Walnut hull stock,FAS 8/4 quartersawn 200x650 mm or equivalent,Bell Forest Products,Owl Hardwood (Chicago),local mill,2-4 weeks,planning-estimate; prices NOT verified live,Stave option needs 10 staves 60x20x650; CNC-from-block option needs single 200x650 billet.
+BOM-002,Cherry brace stock,Air-dried 6mm strips,Owl Hardwood,Bell Forest,Rockler retail,1-2 weeks,planning-estimate,Cut from existing stock if available.
+BOM-004,Western red cedar soundboard,Quartersawn AAA 3 mm 200x650,LMI (Luthiers Mercantile),Stewart-MacDonald,Hibdon Hardwood (Nashville),1-3 weeks,planning-estimate,Order both 2.5 and 3.0 mm for Wolfram sweep validation.
+BOM-006,String-holder strip stock,Walnut OR hard maple 10x4x150 mm,scrap from BOM-001,LMI offcuts,Stewart-MacDonald,immediate,planning-estimate,Make from BOM-001 offcuts when possible.
+BOM-007,Bow-end inlay panel,Mother-of-pearl OR shell composite 100x60 mm,Stewart-MacDonald (MOP tiles),LMI Music (shell composite),Maples Inlays (pale stone composite),1-3 weeks,planning-estimate,Three-candidate sample test per R-X-02 before committing.
+BOM-008,Sapele neck stock,Quartersawn 8/4 or three 12mm laminates,Bell Forest Products,Owl Hardwood,LMI,2-4 weeks,planning-estimate,Three-laminate option preferred for the curve.
+BOM-009,Brass neck-body collar stock,Brass tube 60mm tall 0.8-1.2mm wall OR sheet,McMaster-Carr,Online Metals,Speedy Metals,1 week,planning-estimate,Tube is easier if diameter matches; sheet if custom-bent.
+BOM-011,Lapis-look multi-strip veneer,Dyed-blue veneer 1.5mm + holly/maple spacer,Certainly Wood (dyed veneer),Veneer Supplies,LMI Music,2-4 weeks,planning-estimate,Two-supplier sample compare per R-X-01.
+BOM-012,Inlay epoxy,West System 105/207 OR System Three slow-cure,West Marine,Jamestown Distributors,System Three Direct,1 week,planning-estimate,Tinted as needed for color match.
+BOM-013,Heifer Zephyr brand inlay stock,Brass-leaf veneer OR matching lapis,Certainly Wood,Stewart-MacDonald,Maples Inlays,2-3 weeks,planning-estimate,Order after brand-integration gate closes.
+BOM-014,Fluorocarbon string set (build),SAM-13-ROOT calibrated set strings 5-13,LMI Music,Strings Etc.,Lo-tech harp (NZ),1-2 weeks,planning-estimate,Order calibrated set after Wolfram tension sweep finalizes diameters.
+BOM-015,Wound nylon bass set,SAM-13-ROOT calibrated bass set strings 1-4,LMI Music,Strings Etc.,custom-wound from gauge supplier,2-3 weeks,planning-estimate,Wound nylon brings total tension into 65-80 kgf target.
+BOM-016,A-major retune string set,Drop-in fluorocarbon + wound nylon,LMI Music,Strings Etc.,Lo-tech harp,1-2 weeks,planning-estimate,Optional sibling SKU. Slightly higher gauge across the board.
+BOM-017,Geared guitar tuners,Compact-housing harp/classical-guitar tuner,Stewart-MacDonald (classical),Allied Lutherie (small-format harp tuners),Pacific Coast Strings,2-3 weeks,planning-estimate,Mock-fit one tuner before bulk order per R-X-04.
+BOM-018,PVD-gold-tone brass bulb caps,Custom-machined brass cap + PVD coating,Maker Nexus shop (CNC turn) + local PVD finisher,Pulse Plating (PVD),Jewelry supply (small-batch),3-5 weeks (custom run),planning-estimate; CUSTOM PART,Parallel paths per R-X-03. Highest-risk supply item.
+BOM-019,Decorative tuner cord wrap,Aged-look waxed silk 1mm,Stewart-MacDonald (silk wrap),Maine Thread (waxed cord),Hancock Hardware (sinew lacing),1-2 weeks,planning-estimate,Spool covers all variants.
+BOM-021,Stern eyebolt,M6 x 40 mm 304 stainless forged,McMaster-Carr,Grainger,marine chandlery,3-5 days,planning-estimate,Forged not bent. Working load rating ~40 kgf.
+BOM-023,Under-strip piezo transducer,K&K Pure Mini or equivalent,K&K Sound direct,Stewart-MacDonald,Sweetwater,1-2 weeks,planning-estimate,SAM-13-AE only.
+BOM-024,Output jack,1/4 inch barrel panel-mount,Sweetwater,Mouser,Allparts,3-5 days,planning-estimate,SAM-13-AE only.
+BOM-026,Low-back positioning belt,50-75 mm padded waist belt with D-rings,REI (climbing positioning belt),Petzl (Sequoia or Falcon),Treestand Buddy,1 week,planning-estimate,SAM-19-MID only.
+BOM-027,Saxophone-style harness,Padded shoulder yoke + sternum strap,Sweetwater (BG S40SH),Cebulla harness,Neotech Soft Sax Harness,1-2 weeks,planning-estimate,SAM-25-CONCERT only.
+BOM-028,Locking harness hook,Locking carabiner-class snap hook 40 kN,REI,Petzl,marine chandlery,1 week,planning-estimate,Per R-Z-02. Locking required not snap-only.
+BOM-030,Stand upright stock,Walnut quartersawn 8/4,Bell Forest Products,Owl Hardwood,scrap from BOM-001,2-4 weeks,planning-estimate,Match hull walnut visually.
+BOM-031,Stand base stock,Walnut 12/4,Bell Forest Products,Owl Hardwood,specialty mill,3-5 weeks,planning-estimate,Heavier stock for stability.
+BOM-033,Hide glue,Liquid hide glue OR hot hide pellets 250g,Lee Valley (liquid),Tools for Working Wood (hot pellets),Stewart-MacDonald,1 week,planning-estimate,Hot hide preferred for reversibility on string-holder strip.
+BOM-034,Wood glue PVA,Titebond III 8 oz,Home Depot,Lee Valley,Rockler,immediate,planning-estimate,Standard PVA for non-reversible joints.
+BOM-035,Two-part epoxy,30-min cure 8 oz,Home Depot (System Three or West),Jamestown Distributors,Lee Valley,immediate,planning-estimate,For brass-to-wood and high-stress glue lines.
+BOM-036,Oil + wax finish,Tried-and-True OR Osmo Polyx-Oil 0.5L,Lee Valley,Woodcraft,Highland Woodworking,1 week,planning-estimate,Hull and neck.
+BOM-037,Soundboard finish,Hard shellac (1lb cut) OR thin oil 250ml,Lee Valley,Tools for Working Wood,Woodcraft,1 week,planning-estimate,Thin finish to avoid damping.
+BOM-039,CNC inlay end mill 0.8-1.0mm,Solid carbide 2-flute,Onsrud,Amana Tool,Drillman1 (eBay),1 week,planning-estimate,Spare per R-F-01.
+
+# Sourcing-doc assumption flag: this is a SPEC-FIRST table.
+# No live prices were verified. All "candidate_supplier_*" entries are reasonable industry-standard sources,
+# not vetted vendor relationships. Lead-time estimates are typical, not committed.
+# Verify availability, pricing, and shipping before placing any order.
+#
+# Highest-risk supply items (re-check before commit):
+# BOM-018 PVD-gold-tone bulb caps - custom part, longest lead, two-supplier parallel search recommended
+# BOM-017 Geared tuners - mock-fit before bulk order
+# BOM-007 Bow-end inlay panel - three-candidate sample compare before commit
+# BOM-001 Walnut hull stock - need clean grain for CNC; visual match between hull, stand, stub feet

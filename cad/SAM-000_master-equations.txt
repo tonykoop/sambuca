@@ -1,0 +1,140 @@
+'====================================================================
+'  SAM-000 Master Equations - SolidWorks External File
+'  Units: inches (1 in = 25.4 mm exactly)
+'  Last edit: 2026-05-16
+'====================================================================
+'
+'  ANCHORS - SAM-13-ROOT
+'
+"body_length_in" = 25.591
+"body_width_in" = 5.906
+"body_depth_in" = 7.874
+"instrument_height_in" = 31.890
+"string_count" = 13
+'
+'  TUNING - G3 to E5 diatonic 13-string
+'
+"f_min_hz" = 196.0
+"f_max_hz" = 659.3
+"string_len_max_in" = 22.835
+"string_len_min_in" = 7.874
+"length_freq_exponent" = 0.85
+'
+'  DERIVED
+'
+"slimness" = "body_length_in" / "body_width_in"
+"scale_factor" = "body_length_in" / 25.591
+'
+'  HULL AND SOUNDBOARD
+'
+"hull_wall_in" = 0.236
+"soundboard_thickness_in" = 0.118
+'
+'  NECK
+'
+"neck_arc_length_in" = "instrument_height_in" - "body_depth_in" + 1.969
+"neck_curve_radius_in" = 0.75 * "neck_arc_length_in"
+"neck_width_in" = 1.496
+"neck_depth_in" = 1.969
+"neck_lean_deg" = 0.1
+'
+'  NECK-TO-BODY JOINT
+'
+"joint_collar_height_in" = 2.362
+"joint_scarf_length_in" = 3.150
+'
+'  STRING-HOLDER STRIP
+'
+"strip_x_from_stern_in" = "body_length_in" * 0.80
+"strip_length_in" = 4.724 * "scale_factor"
+"strip_width_in" = 0.394
+"strip_thickness_in" = 0.157
+"string_spacing_in" = "strip_length_in" / ( "string_count" + 1 )
+"tie_hole_dia_in" = 0.059
+'
+'  KEEL SOUNDPORT
+'
+"keel_port_long_in" = 3.150 * "scale_factor"
+"keel_port_short_in" = 1.969 * "scale_factor"
+"keel_port_x_from_bow_in" = "body_length_in" * 0.55
+"keel_port_forward_tilt_deg" = 15
+'
+'  TUNER HOLES (zither pegs)
+'
+"tuner_hole_dia_in" = 0.236
+"tuner_hole_depth_in" = 0.984
+"tuner_hole_down_angle_deg" = 5
+'
+'  HULL-SIDE INLAY
+'
+"hull_inlay_coverage_pct" = 0.70
+"hull_inlay_width_in" = 1.378
+"hull_inlay_pocket_depth_in" = 0.059
+'
+'  STRING-PITCH SCHEDULE
+'
+"f1_hz" = "f_min_hz" * 2 ^ ( 0 / 12 )
+"f2_hz" = "f_min_hz" * 2 ^ ( 2 / 12 )
+"f3_hz" = "f_min_hz" * 2 ^ ( 4 / 12 )
+"f4_hz" = "f_min_hz" * 2 ^ ( 5 / 12 )
+"f5_hz" = "f_min_hz" * 2 ^ ( 7 / 12 )
+"f6_hz" = "f_min_hz" * 2 ^ ( 9 / 12 )
+"f7_hz" = "f_min_hz" * 2 ^ ( 11 / 12 )
+"f8_hz" = "f_min_hz" * 2 ^ ( 12 / 12 )
+"f9_hz" = "f_min_hz" * 2 ^ ( 14 / 12 )
+"f10_hz" = "f_min_hz" * 2 ^ ( 16 / 12 )
+"f11_hz" = "f_min_hz" * 2 ^ ( 17 / 12 )
+"f12_hz" = "f_min_hz" * 2 ^ ( 19 / 12 )
+"f13_hz" = "f_min_hz" * 2 ^ ( 21 / 12 )
+'
+'  SPEAKING LENGTHS
+'
+"L1_in" = "string_len_min_in" * ( "f_max_hz" / "f1_hz" ) ^ "length_freq_exponent"
+"L2_in" = "string_len_min_in" * ( "f_max_hz" / "f2_hz" ) ^ "length_freq_exponent"
+"L3_in" = "string_len_min_in" * ( "f_max_hz" / "f3_hz" ) ^ "length_freq_exponent"
+"L4_in" = "string_len_min_in" * ( "f_max_hz" / "f4_hz" ) ^ "length_freq_exponent"
+"L5_in" = "string_len_min_in" * ( "f_max_hz" / "f5_hz" ) ^ "length_freq_exponent"
+"L6_in" = "string_len_min_in" * ( "f_max_hz" / "f6_hz" ) ^ "length_freq_exponent"
+"L7_in" = "string_len_min_in" * ( "f_max_hz" / "f7_hz" ) ^ "length_freq_exponent"
+"L8_in" = "string_len_min_in" * ( "f_max_hz" / "f8_hz" ) ^ "length_freq_exponent"
+"L9_in" = "string_len_min_in" * ( "f_max_hz" / "f9_hz" ) ^ "length_freq_exponent"
+"L10_in" = "string_len_min_in" * ( "f_max_hz" / "f10_hz" ) ^ "length_freq_exponent"
+"L11_in" = "string_len_min_in" * ( "f_max_hz" / "f11_hz" ) ^ "length_freq_exponent"
+"L12_in" = "string_len_min_in" * ( "f_max_hz" / "f12_hz" ) ^ "length_freq_exponent"
+"L13_in" = "string_len_min_in" * ( "f_max_hz" / "f13_hz" ) ^ "length_freq_exponent"
+'
+'  NECK PEG POSITIONS
+'
+"s1_neck" = "L1_in"
+"s2_neck" = "L2_in"
+"s3_neck" = "L3_in"
+"s4_neck" = "L4_in"
+"s5_neck" = "L5_in"
+"s6_neck" = "L6_in"
+"s7_neck" = "L7_in"
+"s8_neck" = "L8_in"
+"s9_neck" = "L9_in"
+"s10_neck" = "L10_in"
+"s11_neck" = "L11_in"
+"s12_neck" = "L12_in"
+"s13_neck" = "L13_in"
+'
+'  STAND
+'
+"stand_height_in" = 10.827
+"stand_upright_count" = 2
+'
+'  INLAY - SEAM BAND
+'
+"inlay_band_width_in" = 0.472
+"inlay_band_depth_in" = 0.059
+"inlay_strip_count" = 5
+"inlay_strip_width_in" = 0.059
+"inlay_strip_gap_in" = 0.031
+'
+'  INLAY - BOW PANEL
+'
+"bow_panel_length_in" = 3.937 * "scale_factor"
+"bow_panel_width_in" = 2.362 * "scale_factor"
+"bow_panel_depth_in" = 0.059
+"bow_panel_x_from_stern_in" = "body_length_in" * 0.82
