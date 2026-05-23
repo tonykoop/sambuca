@@ -63,6 +63,7 @@ Five planned variants, all from one MasterLayout part. See `family-spec.csv`.
 
 - `reverse-engineering.md` — analysis of BM 121198 and the second photo set. Read this first.
 - `design.md` — design intent, soundhole strategy, harness logic, inlay program, cultural provenance language, brand options.
+- `acoustic-validation-decision.md` — public/private-review decision record for acoustic validation tracking.
 - `family-spec.csv` — five family variants.
 - `risks.md` — red-team register with verification tests.
 
