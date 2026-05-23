@@ -20,3 +20,5 @@ Thumbs.db
 # Local-only experiments
 /scratch/
 /local-*/
+# Stash-recovery sidecars
+stash-recovered-*/
