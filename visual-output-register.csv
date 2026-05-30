@@ -1,0 +1,45 @@
+artifact_path,artifact_type,authority,source,mcp_session_id,notes
+cad/SAM-000_MasterLayout.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n/a,Kora Pack-and-Go geometry — internal hull/neck shape is kora-sourced; rebuild per SW-MIGRATION-CHECKLIST.md required before any dimensional authority
+cad/SAM-000_SAMBUCA.SLDASM,cad-assembly,pending_measurement,pack-and-go-inherited,n/a,Assembly mates inherited from kora; rebuild and re-mate after MasterLayout clears
+cad/SAM-000_MasterPart.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n/a,Intermediary part from Pack-and-Go; pending rebuild
+cad/SAM-000_BoatBody.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n/a,Hull body part from Pack-and-Go; shape is kora-inherited pending sambuca-specific rebuild
+cad/SAM-000_Neck.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n/a,Neck part from Pack-and-Go; arc and scarf geometry pending rebuild
+cad/SAM-000_SAMBUCA_ALL_CONFIGS_dimensions.csv,design-table,pending_measurement,not-yet-generated,n/a,Planned: design-table export across 5 configs — requires clean MasterLayout rebuild before generation
+cad/SAM-000_master-equations.txt,reference-doc,reference_only,hand-authored,n/a,Authoritative global equations for all 5 family variants; single source of truth for dimensions referenced throughout BOM/cut-list/validation
+cad/SAM-000_MasterLayout.xlsx,reference-doc,reference_only,hand-authored,n/a,Excel design-table scaffold; values aligned to master-equations
+wolfram/sambuca-acoustics-starter.wl,acoustic-model,analysis_only,hand-authored,n/a,Wolfram plate-mode estimator and coupled cavity × plate response — analysis scaffold; runtime claims require execution evidence
+drawings/sambuca-overview-front.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 01: front elevation — requires clean SW MasterLayout rebuild
+drawings/sambuca-overview-side.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 02: right elevation — requires clean SW MasterLayout rebuild
+drawings/sambuca-overview-top.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 03: top plan — requires clean SW MasterLayout rebuild
+drawings/sambuca-hull-side-profile.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 04: hull side detail — requires CAD geometry
+drawings/sambuca-hull-top-profile.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 05: hull top detail — requires CAD geometry
+drawings/sambuca-hull-cross-section.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 06: cross sections — requires CAD geometry
+drawings/sambuca-neck-arc.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 07: neck arc and sections — requires CAD geometry
+drawings/sambuca-scarf-collar.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 08: neck-body scarf joint + brass collar — requires CAD geometry
+drawings/sambuca-string-holder-strip.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 09: string-holder strip — requires CAD geometry
+drawings/sambuca-soundboard-inlay.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 10: soundboard with 5-strip inlay band + bow panel — HIGH priority for capstone
+drawings/sambuca-keel-port.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 11: keel port detail — requires CAD geometry
+drawings/sambuca-stand.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 12: walnut cradle stand assembly — requires CAD geometry
+drawings/sambuca-stand-kanawa.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 13: kanawa-tsugi / mitsuke-aritsugi joint detail — requires CAD geometry
+drawings/sambuca-tuner-cap-wrap.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 14: zither peg section with cord wrap — requires CAD geometry
+drawings/sambuca-stern-eyebolt.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 15: stern eyebolt plate (SAM-19/25 harness variant) — requires CAD geometry
+drawings/sambuca-brand-option-a.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 16: soundboard wordmark — gate-blocked (brand integration release gate open)
+drawings/sambuca-brand-option-b.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 17: stand wordmark — gate-blocked (brand integration release gate open)
+drawings/sambuca-family-overview.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 18: all 5 configs at 1:5 — HIGH priority for capstone family-spec slide
+drawings/sam-19-mid-overview.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 19: SAM-19-MID overview — requires CAD config
+drawings/sam-25-concert-overview.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 20: SAM-25-CONCERT overview — requires CAD config
+drawings/sam-13-ae-overview.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 21: SAM-13-AE overview — requires CAD config
+drawings/sam-13-mule-overview.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 22: SAM-13-MULE overview — required for MULE validation gate
+images/SambucaPhotobyDonHitchcock_BritishMuseum.jpg,reference-photo,reference_only,external-source,n/a,Reference photo of BM 121198 reconstruction (Don Hitchcock) — provenance basis for design; not a fabrication artifact
+images/چنگ-چغامبش-11-1536x1536-1-2048x2048.jpg,reference-photo,reference_only,external-source,n/a,Chang/arched-harp reference photo — hull depth and neck arc comparison source
+images/Sambuca Solidworks equations.png,reference-screenshot,reference_only,hand-authored,n/a,Screenshot of SolidWorks equations panel — documentation reference; not a fabrication drawing
+bom.csv,reference-doc,reference_only,hand-authored,n/a,Make/buy materials and hardware per variant — planning prices; not live-verified from suppliers
+sourcing.csv,reference-doc,reference_only,hand-authored,n/a,Candidate suppliers and planning prices — not live-verified
+cut-list.csv,reference-doc,reference_only,hand-authored,n/a,Rough and final cut dimensions — derived from master-equations; not yet validated against physical stock
+validation.csv,reference-doc,reference_only,hand-authored,n/a,Dimensional/tension/acoustic/joint/safety/cultural validation plan — checks are planned; none executed against physical build
+family-spec.csv,reference-doc,reference_only,hand-authored,n/a,Five family variant spec rows — design intent; not measured from physical builds
+visual-bom-brief.md,reference-doc,reference_only,hand-authored,n/a,Layout spec for visual BOM one-pager — no images generated yet
+photo-shotlist.md,reference-doc,reference_only,hand-authored,n/a,Capture plan for shop/process photos — no images produced yet
+drawing-brief.md,reference-doc,reference_only,hand-authored,n/a,22-sheet manufacturing-drawing spec — drawings not yet generated
+cad/README.md,reference-doc,reference_only,hand-authored,n/a,CAD folder operational notes and workflow gates
+drawings/README.md,reference-doc,reference_only,hand-authored,n/a,Drawing package index — 22 planned SVGs listed; none generated yet

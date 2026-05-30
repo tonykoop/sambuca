@@ -4,7 +4,7 @@ A modern boat-shaped arched harp inspired by the Royal Cemetery of Ur, c. 2600 B
 
 > "More accurately described as a boat-shaped harp" — British Museum curator's card, object 121198.
 
-**Status:** private review. Build packet complete (`instrument-maker-v4` skill, 2026-05-16). Three release gates open before public release.
+**Status:** L2 V5 build-packet candidate — private review. Full v4 planning packet complete (BOM, cut list, validation, assembly manual, Wolfram acoustic study, capstone deck). SolidWorks CAD is kora Pack-and-Go inherited geometry (pending rebuild per `cad/SW-MIGRATION-CHECKLIST.md`); no fabrication-authority drawings exist yet. Three release gates open: SAM-13-MULE tension/joint validation, cultural-advisor review, Heifer Zephyr brand integration.
 
 ---
 
