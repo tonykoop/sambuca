@@ -31,7 +31,7 @@ Paste the block below into a fresh Cowork session to kick off the full build pac
 > - `risks.md` — red-team concerns. Top items I expect to see: neck cantilever failure under full tension, brass-collar mixed-material seasonal movement, keel-port placement vs. structural keel stiffener, harness rated-load for SAM-25.
 > - `supplier-rfq.md` — RFQ drafts for wood, brass, strings, tuners (geared guitar-style hidden behind gold-tone caps), lapis-lazuli-look composite or dyed-veneer-and-epoxy inlay stock, harness hardware.
 > - `drawing-brief.md` and `visual-bom-brief.md` — drawing and visual asset list.
-> - `wolfram-starter.wl` — extend the existing notebook with soundboard plate-mode estimator and combined cavity × plate response.
+> - `wolfram/sambuca-acoustics-starter.wl` — extend the existing notebook with soundboard plate-mode estimator and combined cavity × plate response.
 > - `photo-shotlist.md` — shop and documentation shots.
 > - `capstone-deck.md` and `capstone-deck.pptx` — full presentation outline + slides. Cover: history (BM 121198, Pu-abi's tomb, Royal Cemetery), design freedom argument, family spec, parametric SolidWorks workflow, acoustic study results, build sequence, finished prototype.
 > - `capstone-manifest.json` — artifact inventory.
