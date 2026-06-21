@@ -98,7 +98,9 @@
     },
     "harness": {
       "folder": "harness/",
-      "files": ["harness/README.md"],
+      "files": [
+        "harness/README.md"
+      ],
       "status": "design notes for SAM-19-MID and SAM-25-CONCERT harnesses"
     }
   },
@@ -149,5 +151,16 @@
       "title": "Kora MasterLayout parametric template",
       "credit": "Tony Koop, prior work, C:\\Users\\Tony\\Documents\\GitHub\\kora"
     }
-  ]
+  ],
+  "engineering": {
+    "wolfram": [
+      {
+        "source_file": "strings/sambuca/wolfram/sambuca-acoustics-starter.wl",
+        "cloud_path": "Musical_Instruments/strings/sambuca/sambuca-acoustics-starter.wl",
+        "cloud_url": "https://www.wolframcloud.com/obj/wrfcoin/Musical_Instruments/strings/sambuca/sambuca-acoustics-starter.wl",
+        "permission": "Public-Execute",
+        "kind": "acoustics-starter"
+      }
+    ]
+  }
 }
