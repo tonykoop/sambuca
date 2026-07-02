@@ -9,6 +9,7 @@ This folder holds the SolidWorks design package. The canonical authoritative sou
 | File | Status | Purpose |
 |---|---|---|
 | `SAM-000_master-equations.txt` | locked | Authoritative global equations. Paste into SolidWorks Equations Manager. |
+| `sambuca.scad` | pending_measurement | Parametric OpenSCAD boat-hull/neck envelope traced to `SAM-000_master-equations.txt` + `../family-spec.csv`. Renders clean; NOT fabrication authority and does NOT supersede the SolidWorks MasterLayout rebuild. |
 | `SW-MIGRATION-CHECKLIST.md` | in-progress | Step-by-step rebuild of the SolidWorks MasterLayout from kora Pack-and-Go. Path A recommended. |
 | `SAM-000_MasterLayout.SLDPRT` | kora-inherited geometry | Pack-and-Go output. Internal geometry is still kora-shaped; rebuild per the migration checklist. |
 | `SAM-000_SAMBUCA.SLDASM` | kora-inherited mates | Assembly file. Re-mate after MasterLayout rebuild. |

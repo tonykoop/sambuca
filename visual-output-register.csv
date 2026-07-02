@@ -6,6 +6,7 @@ cad/SAM-000_BoatBody.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n
 cad/SAM-000_Neck.SLDPRT,cad-part,pending_measurement,pack-and-go-inherited,n/a,Neck part from Pack-and-Go; arc and scarf geometry pending rebuild
 cad/SAM-000_SAMBUCA_ALL_CONFIGS_dimensions.csv,design-table,pending_measurement,not-yet-generated,n/a,Planned: design-table export across 5 configs — requires clean MasterLayout rebuild before generation
 cad/SAM-000_master-equations.txt,reference-doc,reference_only,hand-authored,n/a,Authoritative global equations for all 5 family variants; single source of truth for dimensions referenced throughout BOM/cut-list/validation
+cad/sambuca.scad,cad-source,pending_measurement,openscad-envelope-from-master-equations,fable-v5-refresh-2026-07-01,Parametric boat-hull/neck envelope traced to SAM-000_master-equations.txt + family-spec.csv; renders clean (openscad -o STL exit 0); NOT fabrication authority — does not supersede the SolidWorks MasterLayout rebuild
 cad/SAM-000_MasterLayout.xlsx,reference-doc,reference_only,hand-authored,n/a,Excel design-table scaffold; values aligned to master-equations
 wolfram/sambuca-acoustics-starter.wl,acoustic-model,analysis_only,hand-authored,n/a,Wolfram plate-mode estimator and coupled cavity × plate response — analysis scaffold; runtime claims require execution evidence
 drawings/sambuca-overview-front.svg,fabrication-drawing,pending_measurement,not-yet-generated,n/a,Planned sheet 01: front elevation — requires clean SW MasterLayout rebuild

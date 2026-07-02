@@ -4,7 +4,11 @@ A modern boat-shaped arched harp inspired by the Royal Cemetery of Ur, c. 2600 B
 
 > "More accurately described as a boat-shaped harp" — British Museum curator's card, object 121198.
 
-**Status:** L2 V5 build-packet candidate — private review. Full v4 planning packet complete (BOM, cut list, validation, assembly manual, Wolfram acoustic study, capstone deck). SolidWorks CAD is kora Pack-and-Go inherited geometry (pending rebuild per `cad/SW-MIGRATION-CHECKLIST.md`); no fabrication-authority drawings exist yet. Three release gates open: SAM-13-MULE tension/joint validation, cultural-advisor review, Heifer Zephyr brand integration.
+**Status:** L2 V5 build-packet candidate
+
+## Readiness
+
+Private review. Full v4 planning packet complete (BOM, cut list, validation, assembly manual, Wolfram acoustic study, capstone deck). SolidWorks CAD is kora Pack-and-Go inherited geometry (pending rebuild per `cad/SW-MIGRATION-CHECKLIST.md`); a parametric OpenSCAD envelope master (`cad/sambuca.scad`, authority `pending_measurement`) now scaffolds the boat-hull/neck family from `family-spec.csv`, but no fabrication-authority drawings exist yet. Three release gates open: SAM-13-MULE tension/joint validation, cultural-advisor review, Heifer Zephyr brand integration. Not L3 — no measured template, no dimensioned DXF, no prototype setup report.
 
 ---
 
@@ -85,8 +89,10 @@ Five planned variants, all from one MasterLayout part. See `family-spec.csv`.
 ### Engineering
 
 - `cad/SAM-000_master-equations.txt` — global equations (single source of truth).
+- `cad/sambuca.scad` — parametric OpenSCAD boat-hull/neck envelope (authority `pending_measurement`; traced to master-equations + family-spec; not fabrication authority).
 - `cad/SW-MIGRATION-CHECKLIST.md` — SolidWorks rebuild plan.
 - `cad/README.md` — operational notes.
+- `evolution/` — evolution-pipeline Stage 0 intake: master manifest, design-intent, and revision register (Gate A not yet run).
 - `cad/SAM-000_MasterLayout.SLDPRT`, `cad/SAM-000_SAMBUCA.SLDASM` — Pack-and-Go from kora (geometry pending rebuild).
 - `cnc/cnc-plan.md` — pre-CAM operation plan per part.
 - `wolfram/sambuca-acoustics-starter.wl` — acoustic study notebook with plate-mode + coupled-response extensions.
